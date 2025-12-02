@@ -1,0 +1,530 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://example.org/maize-kg#> .
+
+<http://example.org/maize-kg> a owl:Ontology ;
+    rdfs:label "Knowledge Graph Hama & Penyakit Jagung"@id ;
+    rdfs:comment "Ontologi hama dan penyakit jagung dengan definisi Bahasa Indonesia"@id .
+
+# CLASSES
+:Hama a owl:Class ; rdfs:label "Hama"@id .
+:Penyakit a owl:Class ; rdfs:label "Penyakit"@id .
+:DefisiensiUnsur a owl:Class ; rdfs:label "Defisiensi Unsur"@id .
+:Gejala a owl:Class ; rdfs:label "Gejala"@id .
+:BagianTanaman a owl:Class ; rdfs:label "Bagian Tanaman"@id .
+:Patogen a owl:Class ; rdfs:label "Patogen"@id .
+:Vektor a owl:Class ; rdfs:label "Vektor"@id .
+:FaktorLingkungan a owl:Class ; rdfs:label "Faktor Lingkungan"@id .
+:Pencegahan a owl:Class ; rdfs:label "Pencegahan"@id .
+:Pengendalian a owl:Class ; rdfs:label "Pengendalian"@id .
+:PengendalianBiologis a owl:Class ; rdfs:subClassOf :Pengendalian ; rdfs:label "Pengendalian Biologis"@id .
+:PengendalianKimia a owl:Class ; rdfs:subClassOf :Pengendalian ; rdfs:label "Pengendalian Kimia"@id .
+:PengendalianMekanis a owl:Class ; rdfs:subClassOf :Pengendalian ; rdfs:label "Pengendalian Mekanis"@id .
+:Tanaman a owl:Class ; rdfs:label "Tanaman"@id .
+
+# PROPERTIES
+:memilikiGejala a owl:ObjectProperty ; rdfs:domain [ a owl:Class ; owl:unionOf (:Hama :Penyakit :DefisiensiUnsur) ] ; rdfs:range :Gejala .
+:menyerangBagian a owl:ObjectProperty ; rdfs:domain [ a owl:Class ; owl:unionOf (:Hama :Penyakit :DefisiensiUnsur) ] ; rdfs:range :BagianTanaman .
+:disebarkanOleh a owl:ObjectProperty ; rdfs:domain :Penyakit ; rdfs:range :Vektor .
+:dipengaruhiOleh a owl:ObjectProperty ; rdfs:domain [ a owl:Class ; owl:unionOf (:Hama :Penyakit :DefisiensiUnsur) ] ; rdfs:range :FaktorLingkungan .
+:dicegahDengan a owl:ObjectProperty ; rdfs:domain [ a owl:Class ; owl:unionOf (:Hama :Penyakit :DefisiensiUnsur) ] ; rdfs:range :Pencegahan .
+:dikendalikanDengan a owl:ObjectProperty ; rdfs:domain [ a owl:Class ; owl:unionOf (:Hama :Penyakit :DefisiensiUnsur) ] ; rdfs:range :Pengendalian .
+:menyerangTanaman a owl:ObjectProperty ; rdfs:domain [ a owl:Class ; owl:unionOf (:Hama :Penyakit :DefisiensiUnsur) ] ; rdfs:range :Tanaman .
+:disebabkanOleh a owl:ObjectProperty ; rdfs:domain [ a owl:Class ; owl:unionOf (:Hama :Penyakit :DefisiensiUnsur) ] ; rdfs:range :Patogen .
+:namaIlmiah a owl:DatatypeProperty ; rdfs:range xsd:string .
+:penyebabUtama a owl:DatatypeProperty ; rdfs:range xsd:string .
+
+# INDIVIDUALS (Static)
+:Jagung a :Tanaman ; rdfs:label "Jagung"@id ; :namaIlmiah "Zea mays" .
+:virus a :Patogen ; rdfs:label "Virus"@id .
+:jamur a :Patogen ; rdfs:label "Jamur"@id .
+:bakteri a :Patogen ; rdfs:label "Bakteri"@id .
+:serangga a :Patogen ; rdfs:label "Serangga"@id .
+:defisiensi a :Patogen ; rdfs:label "Defisiensi"@id .
+
+
+:Flower_Chafer a :Hama ;
+    rdfs:label "Flower Chafer"@id ;
+    rdfs:comment "Kumbang yang menyerang bunga dan pollen."@id ;
+    :namaIlmiah "Oxycetonia versicolor" ;
+    :penyebabUtama "kumbang_flower_chafer" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :serangga ;
+    :memilikiGejala :kerusakan, :penurunan_hasil ;
+    :menyerangBagian :bunga, :pucuk ;
+    :dicegahDengan :monitoring_rutin, :rotasi_tanaman .
+
+:Boron_Deficiency a :DefisiensiUnsur ;
+    rdfs:label "Boron Deficiency"@id ;
+    rdfs:comment "Kekurangan unsur Boron menghambat pertumbuhan."@id ;
+    :namaIlmiah "Boron Deficiency" ;
+    :penyebabUtama "defisiensi_boron" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :defisiensi ;
+    :memilikiGejala :klorosis, :nekrosis, :daun_rapuh, :batang_rapuh, :daun_mengkerut ;
+    :menyerangBagian :daun, :batang, :akar, :pucuk ;
+    :dipengaruhiOleh :pH_tinggi, :tanah_berpasir, :bahan_organik_rendah ;
+    :dicegahDengan :tes_tanah_rutin, :hindari_pH_tinggi ;
+    :dikendalikanDengan :pupuk_kandang, :boron_foliar .
+
+:Maize_Chlorotic_Mottle_Virus a :Penyakit ;
+    rdfs:label "Maize Chlorotic Mottle Virus"@id ;
+    rdfs:comment "Penyakit virus penyebab bercak klorosis pada daun."@id ;
+    :namaIlmiah "MCMV" ;
+    :penyebabUtama "virus_mcmv" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :virus ;
+    :memilikiGejala :bercak, :klorosis, :nekrosis, :tanaman_kerdil, :deformasi ;
+    :menyerangBagian :daun, :bunga_jantan, :tongkol ;
+    :disebarkanOleh :wereng, :kumbang, :tungau, :thrips ;
+    :dipengaruhiOleh :suhu_tinggi, :kelembaban_tinggi ;
+    :dicegahDengan :varietas_tahan, :monitoring_rutin, :eradikasi_tanaman_sakit, :rotasi_tanaman ;
+    :dikendalikanDengan :insektisida_vektor, :cabut_tanaman_terinfeksi .
+
+:Bagrada_Bug a :Hama ;
+    rdfs:label "Bagrada Bug"@id ;
+    rdfs:comment "Kepik penghisap yang menyerang tanaman muda."@id ;
+    :namaIlmiah "Bagrada hilaris" ;
+    :penyebabUtama "bagrada_bug" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :serangga ;
+    :memilikiGejala :bercak, :klorosis, :layu, :nekrosis ;
+    :menyerangBagian :daun, :batang, :bunga, :pucuk ;
+    :dipengaruhiOleh :suhu_tinggi, :kelembaban_rendah ;
+    :dicegahDengan :monitoring_rutin, :sanitasi_lahan ;
+    :dikendalikanDengan :parasitoid_telur, :imidacloprid, :pyrethroid .
+
+:Spotted_Stemborer a :Hama ;
+    rdfs:label "Spotted Stemborer"@id ;
+    rdfs:comment "Penggerek batang yang merusak jaringan dalam batang."@id ;
+    :namaIlmiah "Chilo partellus" ;
+    :penyebabUtama "chilo_partellus" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :serangga ;
+    :memilikiGejala :kerusakan, :nekrosis, :tanaman_kerdil, :busuk ;
+    :menyerangBagian :daun, :batang ;
+    :dipengaruhiOleh :suhu_tinggi, :kelembaban_tinggi ;
+    :dicegahDengan :varietas_tahan, :monitoring_rutin, :rotasi_tanaman ;
+    :dikendalikanDengan :bacillus_thuringiensis, :tawon_parasitoid, :deltamethrin, :cabut_tanaman_terinfeksi .
+
+:Cucumber_Beetle a :Hama ;
+    rdfs:label "Cucumber Beetle"@id ;
+    rdfs:comment "Kumbang yang menyerang akar dan daun, dapat menyebarkan penyakit layu."@id ;
+    :namaIlmiah "Diabrotica spp." ;
+    :penyebabUtama "diabrotica" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :serangga ;
+    :memilikiGejala :kerusakan, :layu, :busuk ;
+    :menyerangBagian :daun, :bunga, :akar, :batang ;
+    :disebarkanOleh :diabrotica ;
+    :dipengaruhiOleh :suhu_tinggi, :kelembaban_tinggi ;
+    :dicegahDengan :rotasi_tanaman ;
+    :dikendalikanDengan :nematoda, :jamur_beauveria, :acetamiprid, :pyrethroid, :perangkap .
+
+:Iron_Deficiency a :DefisiensiUnsur ;
+    rdfs:label "Iron Deficiency"@id ;
+    rdfs:comment "Kekurangan zat besi menyebabkan klorosis interveinal."@id ;
+    :namaIlmiah "Iron Deficiency" ;
+    :penyebabUtama "defisiensi_zat_besi" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :defisiensi ;
+    :memilikiGejala :klorosis, :nekrosis, :tanaman_kerdil ;
+    :menyerangBagian :daun ;
+    :dipengaruhiOleh :pH_tinggi, :drainase_buruk, :suhu_rendah ;
+    :dicegahDengan :hindari_pH_tinggi, :drainase_baik ;
+    :dikendalikanDengan :pupuk_kandang, :kompos, :ferrous_sulphate .
+
+:Downy_Mildew_of_Maize a :Penyakit ;
+    rdfs:label "Downy Mildew of Maize"@id ;
+    rdfs:comment "Penyakit embun bulu yang menyebabkan pertumbuhan putih."@id ;
+    :namaIlmiah "Peronosclerospora sorghi" ;
+    :penyebabUtama "peronosclerospora_sorghi" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :jamur ;
+    :memilikiGejala :busuk, :tanaman_kerdil, :deformasi ;
+    :menyerangBagian :daun, :batang, :bunga_jantan ;
+    :dicegahDengan :varietas_tahan, :sanitasi_lahan, :rotasi_tanaman ;
+    :dikendalikanDengan :metalaxyl, :mancozeb, :cabut_tanaman_terinfeksi .
+
+:Maize_Bushy_Stunt_Phytoplasma a :Penyakit ;
+    rdfs:label "Maize Bushy Stunt Phytoplasma"@id ;
+    rdfs:comment "Penyakit phytoplasma menyebabkan tanaman kerdil."@id ;
+    :namaIlmiah "Phytoplasma asteris" ;
+    :penyebabUtama "phytoplasma_asteris" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :bakteri ;
+    :memilikiGejala :klorosis, :tanaman_kerdil, :deformasi ;
+    :menyerangBagian :daun, :batang, :bunga_jantan, :tongkol ;
+    :disebarkanOleh :wereng ;
+    :dipengaruhiOleh :suhu_tinggi ;
+    :dicegahDengan :varietas_tahan, :monitoring_rutin, :eradikasi_tanaman_sakit ;
+    :dikendalikanDengan :jamur_metarhizium, :jamur_beauveria, :insektisida_vektor, :cabut_tanaman_terinfeksi .
+
+:Tobacco_Caterpillar a :Hama ;
+    rdfs:label "Tobacco Caterpillar"@id ;
+    rdfs:comment "Ulat grayak yang menyerang daun secara berkelompok."@id ;
+    :namaIlmiah "Spodoptera litura" ;
+    :penyebabUtama "spodoptera_litura" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :serangga ;
+    :memilikiGejala :kerusakan, :gugur_daun ;
+    :menyerangBagian :daun, :bunga, :akar ;
+    :dipengaruhiOleh :suhu_tinggi ;
+    :dicegahDengan :varietas_tahan, :monitoring_rutin ;
+    :dikendalikanDengan :bacillus_thuringiensis, :npv, :neem_oil, :chlorpyrifos, :pengumpulan_manual, :perangkap .
+
+:Sooty_Mold a :Penyakit ;
+    rdfs:label "Sooty Mold"@id ;
+    rdfs:comment "Jamur jelaga yang tumbuh pada embun madu."@id ;
+    :namaIlmiah "Pezizomycotina" ;
+    :penyebabUtama "pezizomycotina" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :jamur ;
+    :memilikiGejala :busuk, :gugur_daun ;
+    :menyerangBagian :daun ;
+    :disebarkanOleh :kutu_daun, :wereng ;
+    :dipengaruhiOleh :kelembaban_tinggi ;
+    :dicegahDengan :jarak_tanam_optimal ;
+    :dikendalikanDengan :neem_oil, :insektisida_organophosphate .
+
+:Fruit_Molds a :Penyakit ;
+    rdfs:label "Fruit Molds"@id ;
+    rdfs:comment "Jamur buah penyebab pembusukan."@id ;
+    :namaIlmiah "Aspergillus spp." ;
+    :penyebabUtama "aspergillus" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :jamur ;
+    :memilikiGejala :busuk, :bercak ;
+    :menyerangBagian :tongkol, :biji ;
+    :dipengaruhiOleh :suhu_tinggi, :kelembaban_tinggi ;
+    :dicegahDengan :penyiraman_tepat ;
+    :dikendalikanDengan :chlorothalonil, :fungisida_copper .
+
+:Nitrogen_Deficiency a :DefisiensiUnsur ;
+    rdfs:label "Nitrogen Deficiency"@id ;
+    rdfs:comment "Kekurangan nitrogen menyebabkan daun menguning."@id ;
+    :namaIlmiah "Nitrogen Deficiency" ;
+    :penyebabUtama "defisiensi_nitrogen" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :defisiensi ;
+    :memilikiGejala :klorosis, :layu, :tanaman_kerdil ;
+    :menyerangBagian :daun ;
+    :dipengaruhiOleh :tanah_berpasir, :kelembaban_tinggi ;
+    :dicegahDengan :tes_tanah_rutin, :drainase_baik ;
+    :dikendalikanDengan :pupuk_kandang, :kompos, :urea, :ammonium_nitrate .
+
+:Maize_Smut a :Penyakit ;
+    rdfs:label "Maize Smut"@id ;
+    rdfs:comment "Penyakit jamur membentuk benjolan hitam pada tongkol."@id ;
+    :namaIlmiah "Ustilago maydis" ;
+    :penyebabUtama "ustilago_maydis" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :jamur ;
+    :memilikiGejala :busuk, :tanaman_kerdil, :deformasi ;
+    :menyerangBagian :daun, :batang, :tongkol ;
+    :dipengaruhiOleh :kelembaban_tinggi ;
+    :dicegahDengan :varietas_tahan, :monitoring_rutin, :sanitasi_lahan ;
+    :dikendalikanDengan :cabut_tanaman_terinfeksi .
+
+:Fall_Armyworm a :Hama ;
+    rdfs:label "Fall Armyworm"@id ;
+    rdfs:comment "Hama ulat yang sangat destruktif, menyerang daun dan tongkol jagung."@id ;
+    :namaIlmiah "Spodoptera frugiperda" ;
+    :penyebabUtama "spodoptera_frugiperda" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :serangga ;
+    :memilikiGejala :kerusakan, :gugur_daun ;
+    :menyerangBagian :daun, :pucuk, :tongkol, :biji ;
+    :dipengaruhiOleh :suhu_tinggi, :kelembaban_tinggi ;
+    :dicegahDengan :varietas_tahan, :monitoring_rutin ;
+    :dikendalikanDengan :bacillus_thuringiensis, :neem_oil, :tawon_parasitoid, :chlorpyrifos, :perangkap, :pengumpulan_manual .
+
+:Stunt_of_Maize a :Penyakit ;
+    rdfs:label "Stunt of Maize"@id ;
+    rdfs:comment "Penyakit kerdil yang disebabkan Spiroplasma."@id ;
+    :namaIlmiah "Spiroplasma kunkelii" ;
+    :penyebabUtama "spiroplasma_kunkelii" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :bakteri ;
+    :memilikiGejala :layu, :klorosis, :bercak, :tanaman_kerdil, :deformasi ;
+    :menyerangBagian :daun, :batang, :tongkol ;
+    :disebarkanOleh :wereng ;
+    :dipengaruhiOleh :suhu_tinggi ;
+    :dicegahDengan :varietas_tahan, :monitoring_rutin, :rotasi_tanaman ;
+    :dikendalikanDengan :jamur_metarhizium, :jamur_beauveria .
+
+:Termites a :Hama ;
+    rdfs:label "Termites"@id ;
+    rdfs:comment "Rayap yang menyerang akar dan batang bawah."@id ;
+    :namaIlmiah "Termitidae" ;
+    :penyebabUtama "termites" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :serangga ;
+    :memilikiGejala :layu, :kerusakan, :busuk ;
+    :menyerangBagian :akar, :batang ;
+    :dicegahDengan :monitoring_rutin, :sanitasi_lahan ;
+    :dikendalikanDengan :nematoda, :jamur_beauveria, :neem_oil, :chlorpyrifos, :deltamethrin, :imidacloprid .
+
+:Brown_Stink_Bug a :Hama ;
+    rdfs:label "Brown Stink Bug"@id ;
+    rdfs:comment "Kepik pengisap cairan biji yang menyebabkan biji keriput."@id ;
+    :namaIlmiah "Euschistus servus" ;
+    :penyebabUtama "euschistus_servus" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :serangga ;
+    :memilikiGejala :kerusakan, :bercak, :busuk ;
+    :menyerangBagian :tongkol, :biji ;
+    :dipengaruhiOleh :suhu_tinggi ;
+    :dicegahDengan :monitoring_rutin ;
+    :dikendalikanDengan :tawon_parasitoid, :pyrethroid .
+
+:Sugarcane_Pyrilla a :Hama ;
+    rdfs:label "Sugarcane Pyrilla"@id ;
+    rdfs:comment "Wereng tebu yang menghisap cairan tanaman."@id ;
+    :namaIlmiah "Pyrilla perpusilla" ;
+    :penyebabUtama "pyrilla_perpusilla" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :serangga ;
+    :memilikiGejala :klorosis, :nekrosis, :tanaman_kerdil, :penurunan_hasil ;
+    :menyerangBagian :daun ;
+    :dipengaruhiOleh :kelembaban_tinggi ;
+    :dicegahDengan :monitoring_rutin, :sanitasi_lahan ;
+    :dikendalikanDengan :parasitoid_telur, :chlorpyrifos .
+
+:Shoot_Flies a :Hama ;
+    rdfs:label "Shoot Flies"@id ;
+    rdfs:comment "Lalat pucuk yang menyerang pucuk muda."@id ;
+    :namaIlmiah "Atherigona sp." ;
+    :penyebabUtama "atherigona" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :serangga ;
+    :memilikiGejala :kerusakan, :klorosis, :layu, :tanaman_kerdil, :nekrosis ;
+    :menyerangBagian :daun, :pucuk, :batang ;
+    :dicegahDengan :varietas_tahan, :sanitasi_lahan, :rotasi_tanaman ;
+    :dikendalikanDengan :pyrethroid .
+
+:Foot_and_Collar_Rot a :Penyakit ;
+    rdfs:label "Foot and Collar Rot"@id ;
+    rdfs:comment "Busuk pangkal batang menyebabkan tanaman layu."@id ;
+    :namaIlmiah "Athelia rolfsii" ;
+    :penyebabUtama "athelia_rolfsii" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :jamur ;
+    :memilikiGejala :busuk, :layu, :klorosis, :nekrosis ;
+    :menyerangBagian :batang, :akar, :daun ;
+    :dipengaruhiOleh :pH_rendah, :suhu_tinggi, :kelembaban_tinggi ;
+    :dicegahDengan :varietas_tahan, :drainase_baik, :sanitasi_lahan ;
+    :dikendalikanDengan :trichoderma, :bacillus_subtilis, :metam_sodium, :cabut_tanaman_terinfeksi .
+
+:Maize_Lethal_Necrosis_Disease a :Penyakit ;
+    rdfs:label "Maize Lethal Necrosis Disease"@id ;
+    rdfs:comment "Penyakit nekrosis mematikan akibat kombinasi virus."@id ;
+    :namaIlmiah "MLND" ;
+    :penyebabUtama "virus_mlnd" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :virus ;
+    :memilikiGejala :klorosis, :nekrosis, :tanaman_kerdil, :deformasi, :busuk ;
+    :menyerangBagian :daun, :batang, :tongkol ;
+    :disebarkanOleh :thrips, :kumbang ;
+    :dicegahDengan :varietas_tahan, :monitoring_rutin, :eradikasi_tanaman_sakit, :rotasi_tanaman ;
+    :dikendalikanDengan :insektisida_vektor, :cabut_tanaman_terinfeksi .
+
+:Leaf_Spot_of_Maize a :Penyakit ;
+    rdfs:label "Leaf Spot of Maize"@id ;
+    rdfs:comment "Bercak daun menyebabkan klorosis dan nekrosis."@id ;
+    :namaIlmiah "Cochliobolus lunatus" ;
+    :penyebabUtama "cochliobolus_lunatus" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :jamur ;
+    :memilikiGejala :bercak, :klorosis, :nekrosis, :busuk ;
+    :menyerangBagian :daun, :biji ;
+    :dipengaruhiOleh :suhu_tinggi, :kelembaban_tinggi ;
+    :dicegahDengan :varietas_tahan, :sanitasi_lahan ;
+    :dikendalikanDengan :mancozeb, :chlorothalonil .
+
+:Spotted_Maize_Beetle a :Hama ;
+    rdfs:label "Spotted Maize Beetle"@id ;
+    rdfs:comment "Kumbang berbintik yang menyerang kepala bunga."@id ;
+    :namaIlmiah "Astylus atromaculatus" ;
+    :penyebabUtama "astylus_atromaculatus" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :serangga ;
+    :memilikiGejala :kerusakan ;
+    :menyerangBagian :bunga, :biji ;
+    :dipengaruhiOleh :suhu_tinggi ;
+    :dicegahDengan :rotasi_tanaman ;
+    :dikendalikanDengan :perangkap .
+
+:Stalk_Rot_of_Maize a :Penyakit ;
+    rdfs:label "Stalk Rot of Maize"@id ;
+    rdfs:comment "Busuk batang yang menyebabkan batang rapuh."@id ;
+    :namaIlmiah "Gibberella fujikuroi" ;
+    :penyebabUtama "gibberella_fujikuroi" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :jamur ;
+    :memilikiGejala :busuk, :tanaman_kerdil, :klorosis, :nekrosis, :bercak ;
+    :menyerangBagian :batang, :daun, :biji, :tongkol ;
+    :dipengaruhiOleh :suhu_tinggi, :kelembaban_tinggi ;
+    :dicegahDengan :varietas_tahan, :rotasi_tanaman ;
+    :dikendalikanDengan :trichoderma, :pseudomonas, :neem_oil, :mancozeb, :carbendazim, :cabut_tanaman_terinfeksi .
+
+:Northern_Leaf_Spot_of_Maize a :Penyakit ;
+    rdfs:label "Northern Leaf Spot of Maize"@id ;
+    rdfs:comment "Bercak daun utara dengan lesi memanjang."@id ;
+    :namaIlmiah "Cochliobolus carbonum" ;
+    :penyebabUtama "cochliobolus_carbonum" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :jamur ;
+    :memilikiGejala :bercak, :busuk ;
+    :menyerangBagian :daun, :tongkol ;
+    :dipengaruhiOleh :kelembaban_tinggi ;
+    :dicegahDengan :varietas_tahan, :rotasi_tanaman ;
+    :dikendalikanDengan :mancozeb .
+
+:Zinc_Deficiency a :DefisiensiUnsur ;
+    rdfs:label "Zinc Deficiency"@id ;
+    rdfs:comment "Kekurangan seng menyebabkan daun memutih."@id ;
+    :namaIlmiah "Zinc Deficiency" ;
+    :penyebabUtama "defisiensi_zinc" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :defisiensi ;
+    :memilikiGejala :klorosis, :nekrosis, :tanaman_kerdil, :deformasi ;
+    :menyerangBagian :daun ;
+    :dipengaruhiOleh :pH_tinggi, :tanah_berpasir ;
+    :dicegahDengan :tes_tanah_rutin, :hindari_pH_tinggi ;
+    :dikendalikanDengan :pupuk_kandang, :zinc_sulfate .
+
+:Damping-Off_of_Seedlings a :Penyakit ;
+    rdfs:label "Damping-Off of Seedlings"@id ;
+    rdfs:comment "Penyakit rebah semai pada bibit muda."@id ;
+    :namaIlmiah "Pythium spp." ;
+    :penyebabUtama "pythium" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :jamur ;
+    :memilikiGejala :busuk, :layu, :klorosis, :nekrosis ;
+    :menyerangBagian :batang, :akar, :biji ;
+    :dipengaruhiOleh :kelembaban_tinggi, :suhu_tinggi ;
+    :dicegahDengan :varietas_tahan, :drainase_baik ;
+    :dikendalikanDengan :trichoderma, :bacillus_subtilis, :pseudomonas, :metalaxyl, :fungisida_copper .
+
+:Lesser_Stalk_Borer_of_Maize a :Hama ;
+    rdfs:label "Lesser Stalk Borer of Maize"@id ;
+    :namaIlmiah "Elasmopalpus lignosellus" ;
+    :penyebabUtama "elasmopalpus_lignosellus" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :serangga ;
+    :memilikiGejala :kerusakan, :layu, :tanaman_kerdil, :nekrosis ;
+    :menyerangBagian :batang, :daun ;
+    :dipengaruhiOleh :suhu_tinggi ;
+    :dicegahDengan :monitoring_rutin ;
+    :dikendalikanDengan :tawon_parasitoid, :bacillus_thuringiensis, :jamur_beauveria, :chlorpyrifos, :perangkap .
+
+:Helicoverpa_Caterpillar a :Hama ;
+    rdfs:label "Helicoverpa Caterpillar"@id ;
+    rdfs:comment "Ulat penggerek buah dan tongkol yang polifag."@id ;
+    :namaIlmiah "Helicoverpa armigera" ;
+    :penyebabUtama "helicoverpa_armigera" ;
+    :menyerangTanaman :Jagung ;
+    :disebabkanOleh :serangga ;
+    :memilikiGejala :kerusakan, :busuk ;
+    :menyerangBagian :daun, :bunga, :tongkol, :pucuk ;
+    :dicegahDengan :varietas_tahan, :monitoring_rutin ;
+    :dikendalikanDengan :tawon_parasitoid, :bacillus_thuringiensis, :neem_oil, :chlorpyrifos, :pengumpulan_manual, :perangkap .
+
+# Gejala
+:batang_rapuh a :Gejala ; rdfs:label "Batang Rapuh"@id .
+:bercak a :Gejala ; rdfs:label "Bercak"@id .
+:busuk a :Gejala ; rdfs:label "Busuk"@id .
+:daun_mengkerut a :Gejala ; rdfs:label "Daun Mengkerut"@id .
+:daun_rapuh a :Gejala ; rdfs:label "Daun Rapuh"@id .
+:deformasi a :Gejala ; rdfs:label "Deformasi"@id .
+:gugur_daun a :Gejala ; rdfs:label "Gugur Daun"@id .
+:kerusakan a :Gejala ; rdfs:label "Kerusakan"@id .
+:klorosis a :Gejala ; rdfs:label "Klorosis"@id .
+:layu a :Gejala ; rdfs:label "Layu"@id .
+:nekrosis a :Gejala ; rdfs:label "Nekrosis"@id .
+:penurunan_hasil a :Gejala ; rdfs:label "Penurunan Hasil"@id .
+:tanaman_kerdil a :Gejala ; rdfs:label "Tanaman Kerdil"@id .
+
+# BagianTanaman
+:akar a :BagianTanaman ; rdfs:label "Akar"@id .
+:batang a :BagianTanaman ; rdfs:label "Batang"@id .
+:biji a :BagianTanaman ; rdfs:label "Biji"@id .
+:bunga a :BagianTanaman ; rdfs:label "Bunga"@id .
+:bunga_jantan a :BagianTanaman ; rdfs:label "Bunga Jantan"@id .
+:daun a :BagianTanaman ; rdfs:label "Daun"@id .
+:pucuk a :BagianTanaman ; rdfs:label "Pucuk"@id .
+:tongkol a :BagianTanaman ; rdfs:label "Tongkol"@id .
+
+# Vektor
+:diabrotica a :Vektor ; rdfs:label "Diabrotica"@id .
+:kumbang a :Vektor ; rdfs:label "Kumbang"@id .
+:kutu_daun a :Vektor ; rdfs:label "Kutu Daun"@id .
+:thrips a :Vektor ; rdfs:label "Thrips"@id .
+:tungau a :Vektor ; rdfs:label "Tungau"@id .
+:wereng a :Vektor ; rdfs:label "Wereng"@id .
+
+# FaktorLingkungan
+:bahan_organik_rendah a :FaktorLingkungan ; rdfs:label "Bahan Organik Rendah"@id .
+:drainase_buruk a :FaktorLingkungan ; rdfs:label "Drainase Buruk"@id .
+:kelembaban_rendah a :FaktorLingkungan ; rdfs:label "Kelembaban Rendah"@id .
+:kelembaban_tinggi a :FaktorLingkungan ; rdfs:label "Kelembaban Tinggi"@id .
+:pH_rendah a :FaktorLingkungan ; rdfs:label "Ph Rendah"@id .
+:pH_tinggi a :FaktorLingkungan ; rdfs:label "Ph Tinggi"@id .
+:suhu_rendah a :FaktorLingkungan ; rdfs:label "Suhu Rendah"@id .
+:suhu_tinggi a :FaktorLingkungan ; rdfs:label "Suhu Tinggi"@id .
+:tanah_berpasir a :FaktorLingkungan ; rdfs:label "Tanah Berpasir"@id .
+
+# Pencegahan
+:drainase_baik a :Pencegahan ; rdfs:label "Drainase Baik"@id .
+:eradikasi_tanaman_sakit a :Pencegahan ; rdfs:label "Eradikasi Tanaman Sakit"@id .
+:hindari_pH_tinggi a :Pencegahan ; rdfs:label "Hindari Ph Tinggi"@id .
+:jarak_tanam_optimal a :Pencegahan ; rdfs:label "Jarak Tanam Optimal"@id .
+:monitoring_rutin a :Pencegahan ; rdfs:label "Monitoring Rutin"@id .
+:penyiraman_tepat a :Pencegahan ; rdfs:label "Penyiraman Tepat"@id .
+:rotasi_tanaman a :Pencegahan ; rdfs:label "Rotasi Tanaman"@id .
+:sanitasi_lahan a :Pencegahan ; rdfs:label "Sanitasi Lahan"@id .
+:tes_tanah_rutin a :Pencegahan ; rdfs:label "Tes Tanah Rutin"@id .
+:varietas_tahan a :Pencegahan ; rdfs:label "Varietas Tahan"@id .
+
+# PengendalianBiologis
+:bacillus_subtilis a :PengendalianBiologis ; rdfs:label "Bacillus Subtilis"@id .
+:bacillus_thuringiensis a :PengendalianBiologis ; rdfs:label "Bacillus Thuringiensis"@id .
+:jamur_beauveria a :PengendalianBiologis ; rdfs:label "Jamur Beauveria"@id .
+:jamur_metarhizium a :PengendalianBiologis ; rdfs:label "Jamur Metarhizium"@id .
+:kompos a :PengendalianBiologis ; rdfs:label "Kompos"@id .
+:neem_oil a :PengendalianBiologis ; rdfs:label "Neem Oil"@id .
+:nematoda a :PengendalianBiologis ; rdfs:label "Nematoda"@id .
+:npv a :PengendalianBiologis ; rdfs:label "Npv"@id .
+:parasitoid_telur a :PengendalianBiologis ; rdfs:label "Parasitoid Telur"@id .
+:pseudomonas a :PengendalianBiologis ; rdfs:label "Pseudomonas"@id .
+:pupuk_kandang a :PengendalianBiologis ; rdfs:label "Pupuk Kandang"@id .
+:tawon_parasitoid a :PengendalianBiologis ; rdfs:label "Tawon Parasitoid"@id .
+:trichoderma a :PengendalianBiologis ; rdfs:label "Trichoderma"@id .
+
+# PengendalianKimia
+:acetamiprid a :PengendalianKimia ; rdfs:label "Acetamiprid"@id .
+:ammonium_nitrate a :PengendalianKimia ; rdfs:label "Ammonium Nitrate"@id .
+:boron_foliar a :PengendalianKimia ; rdfs:label "Boron Foliar"@id .
+:carbendazim a :PengendalianKimia ; rdfs:label "Carbendazim"@id .
+:chlorothalonil a :PengendalianKimia ; rdfs:label "Chlorothalonil"@id .
+:chlorpyrifos a :PengendalianKimia ; rdfs:label "Chlorpyrifos"@id .
+:deltamethrin a :PengendalianKimia ; rdfs:label "Deltamethrin"@id .
+:ferrous_sulphate a :PengendalianKimia ; rdfs:label "Ferrous Sulphate"@id .
+:fungisida_copper a :PengendalianKimia ; rdfs:label "Fungisida Copper"@id .
+:imidacloprid a :PengendalianKimia ; rdfs:label "Imidacloprid"@id .
+:insektisida_organophosphate a :PengendalianKimia ; rdfs:label "Insektisida Organophosphate"@id .
+:insektisida_vektor a :PengendalianKimia ; rdfs:label "Insektisida Vektor"@id .
+:mancozeb a :PengendalianKimia ; rdfs:label "Mancozeb"@id .
+:metalaxyl a :PengendalianKimia ; rdfs:label "Metalaxyl"@id .
+:metam_sodium a :PengendalianKimia ; rdfs:label "Metam Sodium"@id .
+:pyrethroid a :PengendalianKimia ; rdfs:label "Pyrethroid"@id .
+:urea a :PengendalianKimia ; rdfs:label "Urea"@id .
+:zinc_sulfate a :PengendalianKimia ; rdfs:label "Zinc Sulfate"@id .
+
+# PengendalianMekanis
+:cabut_tanaman_terinfeksi a :PengendalianMekanis ; rdfs:label "Cabut Tanaman Terinfeksi"@id .
+:pengumpulan_manual a :PengendalianMekanis ; rdfs:label "Pengumpulan Manual"@id .
+:perangkap a :PengendalianMekanis ; rdfs:label "Perangkap"@id .

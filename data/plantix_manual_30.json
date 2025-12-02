@@ -1,0 +1,1052 @@
+[
+  {
+    "id": 1,
+    "nama": "Flower Chafer",
+    "namaIlmiah": "Oxycetonia versicolor",
+    "jenis": "Hama",
+    "jenisPatogen": "serangga",
+    "bagianTanaman": [
+      "bunga",
+      "pucuk"
+    ],
+    "gejala": [
+      "kerusakan",
+      "penurunan_hasil"
+    ],
+    "penyebabUtama": "kumbang_flower_chafer",
+    "vektor": [],
+    "faktorLingkungan": [],
+    "pencegahan": [
+      "monitoring_rutin",
+      "rotasi_tanaman"
+    ],
+    "pengendalianBiologis": [],
+    "pengendalianKimia": [],
+    "pengendalianMekanis": []
+  },
+  {
+    "id": 2,
+    "nama": "Boron Deficiency",
+    "namaIlmiah": "Boron Deficiency",
+    "jenis": "DefisiensiUnsur",
+    "jenisPatogen": "defisiensi",
+    "bagianTanaman": [
+      "daun",
+      "batang",
+      "akar",
+      "pucuk"
+    ],
+    "gejala": [
+      "klorosis",
+      "nekrosis",
+      "daun_rapuh",
+      "batang_rapuh",
+      "daun_mengkerut"
+    ],
+    "penyebabUtama": "defisiensi_boron",
+    "vektor": [],
+    "faktorLingkungan": [
+      "pH_tinggi",
+      "tanah_berpasir",
+      "bahan_organik_rendah"
+    ],
+    "pencegahan": [
+      "tes_tanah_rutin",
+      "hindari_pH_tinggi"
+    ],
+    "pengendalianBiologis": [
+      "pupuk_kandang"
+    ],
+    "pengendalianKimia": [
+      "boron_foliar"
+    ],
+    "pengendalianMekanis": []
+  },
+  {
+    "id": 3,
+    "nama": "Maize Chlorotic Mottle Virus",
+    "namaIlmiah": "MCMV",
+    "jenis": "Penyakit",
+    "jenisPatogen": "virus",
+    "bagianTanaman": [
+      "daun",
+      "bunga_jantan",
+      "tongkol"
+    ],
+    "gejala": [
+      "bercak",
+      "klorosis",
+      "nekrosis",
+      "tanaman_kerdil",
+      "deformasi"
+    ],
+    "penyebabUtama": "virus_mcmv",
+    "vektor": [
+      "wereng",
+      "kumbang",
+      "tungau",
+      "thrips"
+    ],
+    "faktorLingkungan": [
+      "suhu_tinggi",
+      "kelembaban_tinggi"
+    ],
+    "pencegahan": [
+      "varietas_tahan",
+      "monitoring_rutin",
+      "eradikasi_tanaman_sakit",
+      "rotasi_tanaman"
+    ],
+    "pengendalianBiologis": [],
+    "pengendalianKimia": [
+      "insektisida_vektor"
+    ],
+    "pengendalianMekanis": [
+      "cabut_tanaman_terinfeksi"
+    ]
+  },
+  {
+    "id": 4,
+    "nama": "Bagrada Bug",
+    "namaIlmiah": "Bagrada hilaris",
+    "jenis": "Hama",
+    "jenisPatogen": "serangga",
+    "bagianTanaman": [
+      "daun",
+      "batang",
+      "bunga",
+      "pucuk"
+    ],
+    "gejala": [
+      "bercak",
+      "klorosis",
+      "layu",
+      "nekrosis"
+    ],
+    "penyebabUtama": "bagrada_bug",
+    "vektor": [],
+    "faktorLingkungan": [
+      "suhu_tinggi",
+      "kelembaban_rendah"
+    ],
+    "pencegahan": [
+      "monitoring_rutin",
+      "sanitasi_lahan"
+    ],
+    "pengendalianBiologis": [
+      "parasitoid_telur"
+    ],
+    "pengendalianKimia": [
+      "imidacloprid",
+      "pyrethroid"
+    ],
+    "pengendalianMekanis": []
+  },
+  {
+    "id": 5,
+    "nama": "Spotted Stemborer",
+    "namaIlmiah": "Chilo partellus",
+    "jenis": "Hama",
+    "jenisPatogen": "serangga",
+    "bagianTanaman": [
+      "daun",
+      "batang"
+    ],
+    "gejala": [
+      "kerusakan",
+      "nekrosis",
+      "tanaman_kerdil",
+      "busuk"
+    ],
+    "penyebabUtama": "chilo_partellus",
+    "vektor": [],
+    "faktorLingkungan": [
+      "suhu_tinggi",
+      "kelembaban_tinggi"
+    ],
+    "pencegahan": [
+      "varietas_tahan",
+      "monitoring_rutin",
+      "rotasi_tanaman"
+    ],
+    "pengendalianBiologis": [
+      "bacillus_thuringiensis",
+      "tawon_parasitoid"
+    ],
+    "pengendalianKimia": [
+      "deltamethrin"
+    ],
+    "pengendalianMekanis": [
+      "cabut_tanaman_terinfeksi"
+    ]
+  },
+  {
+    "id": 6,
+    "nama": "Cucumber Beetle",
+    "namaIlmiah": "Diabrotica spp.",
+    "jenis": "Hama",
+    "jenisPatogen": "serangga",
+    "bagianTanaman": [
+      "daun",
+      "bunga",
+      "akar",
+      "batang"
+    ],
+    "gejala": [
+      "kerusakan",
+      "layu",
+      "busuk"
+    ],
+    "penyebabUtama": "diabrotica",
+    "vektor": [
+      "diabrotica"
+    ],
+    "faktorLingkungan": [
+      "suhu_tinggi",
+      "kelembaban_tinggi"
+    ],
+    "pencegahan": [
+      "rotasi_tanaman"
+    ],
+    "pengendalianBiologis": [
+      "nematoda",
+      "jamur_beauveria"
+    ],
+    "pengendalianKimia": [
+      "acetamiprid",
+      "pyrethroid"
+    ],
+    "pengendalianMekanis": [
+      "perangkap"
+    ]
+  },
+  {
+    "id": 7,
+    "nama": "Iron Deficiency",
+    "namaIlmiah": "Iron Deficiency",
+    "jenis": "DefisiensiUnsur",
+    "jenisPatogen": "defisiensi",
+    "bagianTanaman": [
+      "daun"
+    ],
+    "gejala": [
+      "klorosis",
+      "nekrosis",
+      "tanaman_kerdil"
+    ],
+    "penyebabUtama": "defisiensi_zat_besi",
+    "vektor": [],
+    "faktorLingkungan": [
+      "pH_tinggi",
+      "drainase_buruk",
+      "suhu_rendah"
+    ],
+    "pencegahan": [
+      "hindari_pH_tinggi",
+      "drainase_baik"
+    ],
+    "pengendalianBiologis": [
+      "pupuk_kandang",
+      "kompos"
+    ],
+    "pengendalianKimia": [
+      "ferrous_sulphate"
+    ],
+    "pengendalianMekanis": []
+  },
+  {
+    "id": 8,
+    "nama": "Downy Mildew of Maize",
+    "namaIlmiah": "Peronosclerospora sorghi",
+    "jenis": "Penyakit",
+    "jenisPatogen": "jamur",
+    "bagianTanaman": [
+      "daun",
+      "batang",
+      "bunga_jantan"
+    ],
+    "gejala": [
+      "busuk",
+      "tanaman_kerdil",
+      "deformasi"
+    ],
+    "penyebabUtama": "peronosclerospora_sorghi",
+    "vektor": [],
+    "faktorLingkungan": [],
+    "pencegahan": [
+      "varietas_tahan",
+      "sanitasi_lahan",
+      "rotasi_tanaman"
+    ],
+    "pengendalianBiologis": [],
+    "pengendalianKimia": [
+      "metalaxyl",
+      "mancozeb"
+    ],
+    "pengendalianMekanis": [
+      "cabut_tanaman_terinfeksi"
+    ]
+  },
+  {
+    "id": 9,
+    "nama": "Maize Bushy Stunt Phytoplasma",
+    "namaIlmiah": "Phytoplasma asteris",
+    "jenis": "Penyakit",
+    "jenisPatogen": "bakteri",
+    "bagianTanaman": [
+      "daun",
+      "batang",
+      "bunga_jantan",
+      "tongkol"
+    ],
+    "gejala": [
+      "klorosis",
+      "tanaman_kerdil",
+      "deformasi"
+    ],
+    "penyebabUtama": "phytoplasma_asteris",
+    "vektor": [
+      "wereng"
+    ],
+    "faktorLingkungan": [
+      "suhu_tinggi"
+    ],
+    "pencegahan": [
+      "varietas_tahan",
+      "monitoring_rutin",
+      "eradikasi_tanaman_sakit"
+    ],
+    "pengendalianBiologis": [
+      "jamur_metarhizium",
+      "jamur_beauveria"
+    ],
+    "pengendalianKimia": [
+      "insektisida_vektor"
+    ],
+    "pengendalianMekanis": [
+      "cabut_tanaman_terinfeksi"
+    ]
+  },
+  {
+    "id": 10,
+    "nama": "Tobacco Caterpillar",
+    "namaIlmiah": "Spodoptera litura",
+    "jenis": "Hama",
+    "jenisPatogen": "serangga",
+    "bagianTanaman": [
+      "daun",
+      "bunga",
+      "akar"
+    ],
+    "gejala": [
+      "kerusakan",
+      "gugur_daun"
+    ],
+    "penyebabUtama": "spodoptera_litura",
+    "vektor": [],
+    "faktorLingkungan": [
+      "suhu_tinggi"
+    ],
+    "pencegahan": [
+      "varietas_tahan",
+      "monitoring_rutin"
+    ],
+    "pengendalianBiologis": [
+      "bacillus_thuringiensis",
+      "npv",
+      "neem_oil"
+    ],
+    "pengendalianKimia": [
+      "chlorpyrifos"
+    ],
+    "pengendalianMekanis": [
+      "pengumpulan_manual",
+      "perangkap"
+    ]
+  },
+  {
+    "id": 11,
+    "nama": "Sooty Mold",
+    "namaIlmiah": "Pezizomycotina",
+    "jenis": "Penyakit",
+    "jenisPatogen": "jamur",
+    "bagianTanaman": [
+      "daun"
+    ],
+    "gejala": [
+      "busuk",
+      "gugur_daun"
+    ],
+    "penyebabUtama": "pezizomycotina",
+    "vektor": [
+      "kutu_daun",
+      "wereng"
+    ],
+    "faktorLingkungan": [
+      "kelembaban_tinggi"
+    ],
+    "pencegahan": [
+      "jarak_tanam_optimal"
+    ],
+    "pengendalianBiologis": [
+      "neem_oil"
+    ],
+    "pengendalianKimia": [
+      "insektisida_organophosphate"
+    ],
+    "pengendalianMekanis": []
+  },
+  {
+    "id": 12,
+    "nama": "Fruit Molds",
+    "namaIlmiah": "Aspergillus spp.",
+    "jenis": "Penyakit",
+    "jenisPatogen": "jamur",
+    "bagianTanaman": [
+      "tongkol",
+      "biji"
+    ],
+    "gejala": [
+      "busuk",
+      "bercak"
+    ],
+    "penyebabUtama": "aspergillus",
+    "vektor": [],
+    "faktorLingkungan": [
+      "suhu_tinggi",
+      "kelembaban_tinggi"
+    ],
+    "pencegahan": [
+      "penyiraman_tepat"
+    ],
+    "pengendalianBiologis": [],
+    "pengendalianKimia": [
+      "chlorothalonil",
+      "fungisida_copper"
+    ],
+    "pengendalianMekanis": []
+  },
+  {
+    "id": 13,
+    "nama": "Nitrogen Deficiency",
+    "namaIlmiah": "Nitrogen Deficiency",
+    "jenis": "DefisiensiUnsur",
+    "jenisPatogen": "defisiensi",
+    "bagianTanaman": [
+      "daun"
+    ],
+    "gejala": [
+      "klorosis",
+      "layu",
+      "tanaman_kerdil"
+    ],
+    "penyebabUtama": "defisiensi_nitrogen",
+    "vektor": [],
+    "faktorLingkungan": [
+      "tanah_berpasir",
+      "kelembaban_tinggi"
+    ],
+    "pencegahan": [
+      "tes_tanah_rutin",
+      "drainase_baik"
+    ],
+    "pengendalianBiologis": [
+      "pupuk_kandang",
+      "kompos"
+    ],
+    "pengendalianKimia": [
+      "urea",
+      "ammonium_nitrate"
+    ],
+    "pengendalianMekanis": []
+  },
+  {
+    "id": 14,
+    "nama": "Maize Smut",
+    "namaIlmiah": "Ustilago maydis",
+    "jenis": "Penyakit",
+    "jenisPatogen": "jamur",
+    "bagianTanaman": [
+      "daun",
+      "batang",
+      "tongkol"
+    ],
+    "gejala": [
+      "busuk",
+      "tanaman_kerdil",
+      "deformasi"
+    ],
+    "penyebabUtama": "ustilago_maydis",
+    "vektor": [],
+    "faktorLingkungan": [
+      "kelembaban_tinggi"
+    ],
+    "pencegahan": [
+      "varietas_tahan",
+      "monitoring_rutin",
+      "sanitasi_lahan"
+    ],
+    "pengendalianBiologis": [],
+    "pengendalianKimia": [],
+    "pengendalianMekanis": [
+      "cabut_tanaman_terinfeksi"
+    ]
+  },
+  {
+    "id": 15,
+    "nama": "Fall Armyworm",
+    "namaIlmiah": "Spodoptera frugiperda",
+    "jenis": "Hama",
+    "jenisPatogen": "serangga",
+    "bagianTanaman": [
+      "daun",
+      "pucuk",
+      "tongkol",
+      "biji"
+    ],
+    "gejala": [
+      "kerusakan",
+      "gugur_daun"
+    ],
+    "penyebabUtama": "spodoptera_frugiperda",
+    "vektor": [],
+    "faktorLingkungan": [
+      "suhu_tinggi",
+      "kelembaban_tinggi"
+    ],
+    "pencegahan": [
+      "varietas_tahan",
+      "monitoring_rutin"
+    ],
+    "pengendalianBiologis": [
+      "bacillus_thuringiensis",
+      "neem_oil",
+      "tawon_parasitoid"
+    ],
+    "pengendalianKimia": [
+      "chlorpyrifos"
+    ],
+    "pengendalianMekanis": [
+      "perangkap",
+      "pengumpulan_manual"
+    ]
+  },
+  {
+    "id": 16,
+    "nama": "Stunt of Maize",
+    "namaIlmiah": "Spiroplasma kunkelii",
+    "jenis": "Penyakit",
+    "jenisPatogen": "bakteri",
+    "bagianTanaman": [
+      "daun",
+      "batang",
+      "tongkol"
+    ],
+    "gejala": [
+      "layu",
+      "klorosis",
+      "bercak",
+      "tanaman_kerdil",
+      "deformasi"
+    ],
+    "penyebabUtama": "spiroplasma_kunkelii",
+    "vektor": [
+      "wereng"
+    ],
+    "faktorLingkungan": [
+      "suhu_tinggi"
+    ],
+    "pencegahan": [
+      "varietas_tahan",
+      "monitoring_rutin",
+      "rotasi_tanaman"
+    ],
+    "pengendalianBiologis": [
+      "jamur_metarhizium",
+      "jamur_beauveria"
+    ],
+    "pengendalianKimia": [],
+    "pengendalianMekanis": []
+  },
+  {
+    "id": 17,
+    "nama": "Termites",
+    "namaIlmiah": "Termitidae",
+    "jenis": "Hama",
+    "jenisPatogen": "serangga",
+    "bagianTanaman": [
+      "akar",
+      "batang"
+    ],
+    "gejala": [
+      "layu",
+      "kerusakan",
+      "busuk"
+    ],
+    "penyebabUtama": "termites",
+    "vektor": [],
+    "faktorLingkungan": [],
+    "pencegahan": [
+      "monitoring_rutin",
+      "sanitasi_lahan"
+    ],
+    "pengendalianBiologis": [
+      "nematoda",
+      "jamur_beauveria",
+      "neem_oil"
+    ],
+    "pengendalianKimia": [
+      "chlorpyrifos",
+      "deltamethrin",
+      "imidacloprid"
+    ],
+    "pengendalianMekanis": []
+  },
+  {
+    "id": 18,
+    "nama": "Brown Stink Bug",
+    "namaIlmiah": "Euschistus servus",
+    "jenis": "Hama",
+    "jenisPatogen": "serangga",
+    "bagianTanaman": [
+      "tongkol",
+      "biji"
+    ],
+    "gejala": [
+      "kerusakan",
+      "bercak",
+      "busuk"
+    ],
+    "penyebabUtama": "euschistus_servus",
+    "vektor": [],
+    "faktorLingkungan": [
+      "suhu_tinggi"
+    ],
+    "pencegahan": [
+      "monitoring_rutin"
+    ],
+    "pengendalianBiologis": [
+      "tawon_parasitoid"
+    ],
+    "pengendalianKimia": [
+      "pyrethroid"
+    ],
+    "pengendalianMekanis": []
+  },
+  {
+    "id": 19,
+    "nama": "Sugarcane Pyrilla",
+    "namaIlmiah": "Pyrilla perpusilla",
+    "jenis": "Hama",
+    "jenisPatogen": "serangga",
+    "bagianTanaman": [
+      "daun"
+    ],
+    "gejala": [
+      "klorosis",
+      "nekrosis",
+      "tanaman_kerdil",
+      "penurunan_hasil"
+    ],
+    "penyebabUtama": "pyrilla_perpusilla",
+    "vektor": [],
+    "faktorLingkungan": [
+      "kelembaban_tinggi"
+    ],
+    "pencegahan": [
+      "monitoring_rutin",
+      "sanitasi_lahan"
+    ],
+    "pengendalianBiologis": [
+      "parasitoid_telur"
+    ],
+    "pengendalianKimia": [
+      "chlorpyrifos"
+    ],
+    "pengendalianMekanis": []
+  },
+  {
+    "id": 20,
+    "nama": "Shoot Flies",
+    "namaIlmiah": "Atherigona sp.",
+    "jenis": "Hama",
+    "jenisPatogen": "serangga",
+    "bagianTanaman": [
+      "daun",
+      "pucuk",
+      "batang"
+    ],
+    "gejala": [
+      "kerusakan",
+      "klorosis",
+      "layu",
+      "tanaman_kerdil",
+      "nekrosis"
+    ],
+    "penyebabUtama": "atherigona",
+    "vektor": [],
+    "faktorLingkungan": [],
+    "pencegahan": [
+      "varietas_tahan",
+      "sanitasi_lahan",
+      "rotasi_tanaman"
+    ],
+    "pengendalianBiologis": [],
+    "pengendalianKimia": [
+      "pyrethroid"
+    ],
+    "pengendalianMekanis": []
+  },
+  {
+    "id": 21,
+    "nama": "Foot and Collar Rot",
+    "namaIlmiah": "Athelia rolfsii",
+    "jenis": "Penyakit",
+    "jenisPatogen": "jamur",
+    "bagianTanaman": [
+      "batang",
+      "akar",
+      "daun"
+    ],
+    "gejala": [
+      "busuk",
+      "layu",
+      "klorosis",
+      "nekrosis"
+    ],
+    "penyebabUtama": "athelia_rolfsii",
+    "vektor": [],
+    "faktorLingkungan": [
+      "pH_rendah",
+      "suhu_tinggi",
+      "kelembaban_tinggi"
+    ],
+    "pencegahan": [
+      "varietas_tahan",
+      "drainase_baik",
+      "sanitasi_lahan"
+    ],
+    "pengendalianBiologis": [
+      "trichoderma",
+      "bacillus_subtilis"
+    ],
+    "pengendalianKimia": [
+      "metam_sodium"
+    ],
+    "pengendalianMekanis": [
+      "cabut_tanaman_terinfeksi"
+    ]
+  },
+  {
+    "id": 22,
+    "nama": "Maize Lethal Necrosis Disease",
+    "namaIlmiah": "MLND",
+    "jenis": "Penyakit",
+    "jenisPatogen": "virus",
+    "bagianTanaman": [
+      "daun",
+      "batang",
+      "tongkol"
+    ],
+    "gejala": [
+      "klorosis",
+      "nekrosis",
+      "tanaman_kerdil",
+      "deformasi",
+      "busuk"
+    ],
+    "penyebabUtama": "virus_mlnd",
+    "vektor": [
+      "thrips",
+      "kumbang"
+    ],
+    "faktorLingkungan": [],
+    "pencegahan": [
+      "varietas_tahan",
+      "monitoring_rutin",
+      "eradikasi_tanaman_sakit",
+      "rotasi_tanaman"
+    ],
+    "pengendalianBiologis": [],
+    "pengendalianKimia": [
+      "insektisida_vektor"
+    ],
+    "pengendalianMekanis": [
+      "cabut_tanaman_terinfeksi"
+    ]
+  },
+  {
+    "id": 23,
+    "nama": "Leaf Spot of Maize",
+    "namaIlmiah": "Cochliobolus lunatus",
+    "jenis": "Penyakit",
+    "jenisPatogen": "jamur",
+    "bagianTanaman": [
+      "daun",
+      "biji"
+    ],
+    "gejala": [
+      "bercak",
+      "klorosis",
+      "nekrosis",
+      "busuk"
+    ],
+    "penyebabUtama": "cochliobolus_lunatus",
+    "vektor": [],
+    "faktorLingkungan": [
+      "suhu_tinggi",
+      "kelembaban_tinggi"
+    ],
+    "pencegahan": [
+      "varietas_tahan",
+      "sanitasi_lahan"
+    ],
+    "pengendalianBiologis": [],
+    "pengendalianKimia": [
+      "mancozeb",
+      "chlorothalonil"
+    ],
+    "pengendalianMekanis": []
+  },
+  {
+    "id": 24,
+    "nama": "Spotted Maize Beetle",
+    "namaIlmiah": "Astylus atromaculatus",
+    "jenis": "Hama",
+    "jenisPatogen": "serangga",
+    "bagianTanaman": [
+      "bunga",
+      "biji"
+    ],
+    "gejala": [
+      "kerusakan"
+    ],
+    "penyebabUtama": "astylus_atromaculatus",
+    "vektor": [],
+    "faktorLingkungan": [
+      "suhu_tinggi"
+    ],
+    "pencegahan": [
+      "rotasi_tanaman"
+    ],
+    "pengendalianBiologis": [],
+    "pengendalianKimia": [],
+    "pengendalianMekanis": [
+      "perangkap"
+    ]
+  },
+  {
+    "id": 25,
+    "nama": "Stalk Rot of Maize",
+    "namaIlmiah": "Gibberella fujikuroi",
+    "jenis": "Penyakit",
+    "jenisPatogen": "jamur",
+    "bagianTanaman": [
+      "batang",
+      "daun",
+      "biji",
+      "tongkol"
+    ],
+    "gejala": [
+      "busuk",
+      "tanaman_kerdil",
+      "klorosis",
+      "nekrosis",
+      "bercak"
+    ],
+    "penyebabUtama": "gibberella_fujikuroi",
+    "vektor": [],
+    "faktorLingkungan": [
+      "suhu_tinggi",
+      "kelembaban_tinggi"
+    ],
+    "pencegahan": [
+      "varietas_tahan",
+      "rotasi_tanaman"
+    ],
+    "pengendalianBiologis": [
+      "trichoderma",
+      "pseudomonas",
+      "neem_oil"
+    ],
+    "pengendalianKimia": [
+      "mancozeb",
+      "carbendazim"
+    ],
+    "pengendalianMekanis": [
+      "cabut_tanaman_terinfeksi"
+    ]
+  },
+  {
+    "id": 26,
+    "nama": "Northern Leaf Spot of Maize",
+    "namaIlmiah": "Cochliobolus carbonum",
+    "jenis": "Penyakit",
+    "jenisPatogen": "jamur",
+    "bagianTanaman": [
+      "daun",
+      "tongkol"
+    ],
+    "gejala": [
+      "bercak",
+      "busuk"
+    ],
+    "penyebabUtama": "cochliobolus_carbonum",
+    "vektor": [],
+    "faktorLingkungan": [
+      "kelembaban_tinggi"
+    ],
+    "pencegahan": [
+      "varietas_tahan",
+      "rotasi_tanaman"
+    ],
+    "pengendalianBiologis": [],
+    "pengendalianKimia": [
+      "mancozeb"
+    ],
+    "pengendalianMekanis": []
+  },
+  {
+    "id": 27,
+    "nama": "Zinc Deficiency",
+    "namaIlmiah": "Zinc Deficiency",
+    "jenis": "DefisiensiUnsur",
+    "jenisPatogen": "defisiensi",
+    "bagianTanaman": [
+      "daun"
+    ],
+    "gejala": [
+      "klorosis",
+      "nekrosis",
+      "tanaman_kerdil",
+      "deformasi"
+    ],
+    "penyebabUtama": "defisiensi_zinc",
+    "vektor": [],
+    "faktorLingkungan": [
+      "pH_tinggi",
+      "tanah_berpasir"
+    ],
+    "pencegahan": [
+      "tes_tanah_rutin",
+      "hindari_pH_tinggi"
+    ],
+    "pengendalianBiologis": [
+      "pupuk_kandang"
+    ],
+    "pengendalianKimia": [
+      "zinc_sulfate"
+    ],
+    "pengendalianMekanis": []
+  },
+  {
+    "id": 28,
+    "nama": "Damping-Off of Seedlings",
+    "namaIlmiah": "Pythium spp.",
+    "jenis": "Penyakit",
+    "jenisPatogen": "jamur",
+    "bagianTanaman": [
+      "batang",
+      "akar",
+      "biji"
+    ],
+    "gejala": [
+      "busuk",
+      "layu",
+      "klorosis",
+      "nekrosis"
+    ],
+    "penyebabUtama": "pythium",
+    "vektor": [],
+    "faktorLingkungan": [
+      "kelembaban_tinggi",
+      "suhu_tinggi"
+    ],
+    "pencegahan": [
+      "varietas_tahan",
+      "drainase_baik"
+    ],
+    "pengendalianBiologis": [
+      "trichoderma",
+      "bacillus_subtilis",
+      "pseudomonas"
+    ],
+    "pengendalianKimia": [
+      "metalaxyl",
+      "fungisida_copper"
+    ],
+    "pengendalianMekanis": []
+  },
+  {
+    "id": 29,
+    "nama": "Lesser Stalk Borer of Maize",
+    "namaIlmiah": "Elasmopalpus lignosellus",
+    "jenis": "Hama",
+    "jenisPatogen": "serangga",
+    "bagianTanaman": [
+      "batang",
+      "daun"
+    ],
+    "gejala": [
+      "kerusakan",
+      "layu",
+      "tanaman_kerdil",
+      "nekrosis"
+    ],
+    "penyebabUtama": "elasmopalpus_lignosellus",
+    "vektor": [],
+    "faktorLingkungan": [
+      "suhu_tinggi"
+    ],
+    "pencegahan": [
+      "monitoring_rutin"
+    ],
+    "pengendalianBiologis": [
+      "tawon_parasitoid",
+      "bacillus_thuringiensis",
+      "jamur_beauveria"
+    ],
+    "pengendalianKimia": [
+      "chlorpyrifos"
+    ],
+    "pengendalianMekanis": [
+      "perangkap"
+    ]
+  },
+  {
+    "id": 30,
+    "nama": "Helicoverpa Caterpillar",
+    "namaIlmiah": "Helicoverpa armigera",
+    "jenis": "Hama",
+    "jenisPatogen": "serangga",
+    "bagianTanaman": [
+      "daun",
+      "bunga",
+      "tongkol",
+      "pucuk"
+    ],
+    "gejala": [
+      "kerusakan",
+      "busuk"
+    ],
+    "penyebabUtama": "helicoverpa_armigera",
+    "vektor": [],
+    "faktorLingkungan": [],
+    "pencegahan": [
+      "varietas_tahan",
+      "monitoring_rutin"
+    ],
+    "pengendalianBiologis": [
+      "tawon_parasitoid",
+      "bacillus_thuringiensis",
+      "neem_oil"
+    ],
+    "pengendalianKimia": [
+      "chlorpyrifos"
+    ],
+    "pengendalianMekanis": [
+      "pengumpulan_manual",
+      "perangkap"
+    ]
+  }
+]
