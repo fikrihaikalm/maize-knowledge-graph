@@ -1,0 +1,1911 @@
+@prefix : <http://www.semanticweb.org/user/ontologies/2025/11/maize-kg-exp#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/user/ontologies/2025/11/maize-kg-exp> .
+
+<http://www.semanticweb.org/user/ontologies/2025/11/maize-kg-exp> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/maize-kg#dicegahDengan
+<http://example.org/maize-kg#dicegahDengan> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain [ rdf:type owl:Class ;
+                                                          owl:unionOf ( <http://example.org/maize-kg#DefisiensiUnsur>
+                                                                        <http://example.org/maize-kg#Hama>
+                                                                        <http://example.org/maize-kg#Penyakit>
+                                                                      )
+                                                        ] ;
+                                            rdfs:range <http://example.org/maize-kg#Pencegahan> .
+
+
+###  http://example.org/maize-kg#dikendalikanDengan
+<http://example.org/maize-kg#dikendalikanDengan> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain [ rdf:type owl:Class ;
+                                                               owl:unionOf ( <http://example.org/maize-kg#DefisiensiUnsur>
+                                                                             <http://example.org/maize-kg#Hama>
+                                                                             <http://example.org/maize-kg#Penyakit>
+                                                                           )
+                                                             ] ;
+                                                 rdfs:range <http://example.org/maize-kg#Pengendalian> .
+
+
+###  http://example.org/maize-kg#dipengaruhiOleh
+<http://example.org/maize-kg#dipengaruhiOleh> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain [ rdf:type owl:Class ;
+                                                            owl:unionOf ( <http://example.org/maize-kg#DefisiensiUnsur>
+                                                                          <http://example.org/maize-kg#Hama>
+                                                                          <http://example.org/maize-kg#Penyakit>
+                                                                        )
+                                                          ] ;
+                                              rdfs:range <http://example.org/maize-kg#FaktorLingkungan> .
+
+
+###  http://example.org/maize-kg#disebabkanOleh
+<http://example.org/maize-kg#disebabkanOleh> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain [ rdf:type owl:Class ;
+                                                           owl:unionOf ( <http://example.org/maize-kg#DefisiensiUnsur>
+                                                                         <http://example.org/maize-kg#Hama>
+                                                                         <http://example.org/maize-kg#Penyakit>
+                                                                       )
+                                                         ] ;
+                                             rdfs:range <http://example.org/maize-kg#Patogen> .
+
+
+###  http://example.org/maize-kg#disebarkanOleh
+<http://example.org/maize-kg#disebarkanOleh> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://example.org/maize-kg#Penyakit> ;
+                                             rdfs:range <http://example.org/maize-kg#Vektor> .
+
+
+###  http://example.org/maize-kg#masalahSerupa
+<http://example.org/maize-kg#masalahSerupa> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <http://example.org/maize-kg#MasalahTanaman> ;
+                                            rdfs:range <http://example.org/maize-kg#MasalahTanaman> .
+
+
+###  http://example.org/maize-kg#memilikiGejala
+<http://example.org/maize-kg#memilikiGejala> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain [ rdf:type owl:Class ;
+                                                           owl:unionOf ( <http://example.org/maize-kg#DefisiensiUnsur>
+                                                                         <http://example.org/maize-kg#Hama>
+                                                                         <http://example.org/maize-kg#Penyakit>
+                                                                       )
+                                                         ] ;
+                                             rdfs:range <http://example.org/maize-kg#Gejala> .
+
+
+###  http://example.org/maize-kg#menyerangBagian
+<http://example.org/maize-kg#menyerangBagian> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain [ rdf:type owl:Class ;
+                                                            owl:unionOf ( <http://example.org/maize-kg#DefisiensiUnsur>
+                                                                          <http://example.org/maize-kg#Hama>
+                                                                          <http://example.org/maize-kg#Penyakit>
+                                                                        )
+                                                          ] ;
+                                              rdfs:range <http://example.org/maize-kg#BagianTanaman> .
+
+
+###  http://example.org/maize-kg#menyerangTanaman
+<http://example.org/maize-kg#menyerangTanaman> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain [ rdf:type owl:Class ;
+                                                             owl:unionOf ( <http://example.org/maize-kg#DefisiensiUnsur>
+                                                                           <http://example.org/maize-kg#Hama>
+                                                                           <http://example.org/maize-kg#Penyakit>
+                                                                         )
+                                                           ] ;
+                                               rdfs:range <http://example.org/maize-kg#Tanaman> .
+
+
+###  http://example.org/maize-kg#rekomendasiPengendalian
+<http://example.org/maize-kg#rekomendasiPengendalian> rdf:type owl:ObjectProperty ;
+                                                      rdfs:domain <http://example.org/maize-kg#MasalahTanaman> ;
+                                                      rdfs:range <http://example.org/maize-kg#Pengendalian> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/maize-kg#namaIlmiah
+<http://example.org/maize-kg#namaIlmiah> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain [ rdf:type owl:Class ;
+                                                       owl:unionOf ( <http://example.org/maize-kg#DefisiensiUnsur>
+                                                                     <http://example.org/maize-kg#Hama>
+                                                                     <http://example.org/maize-kg#Penyakit>
+                                                                     <http://example.org/maize-kg#Tanaman>
+                                                                   )
+                                                     ] ;
+                                         rdfs:range xsd:string .
+
+
+###  http://example.org/maize-kg#penyebabUtama
+<http://example.org/maize-kg#penyebabUtama> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain [ rdf:type owl:Class ;
+                                                          owl:unionOf ( <http://example.org/maize-kg#DefisiensiUnsur>
+                                                                        <http://example.org/maize-kg#Hama>
+                                                                        <http://example.org/maize-kg#Penyakit>
+                                                                      )
+                                                        ] ;
+                                            rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/maize-kg#BagianTanaman
+<http://example.org/maize-kg#BagianTanaman> rdf:type owl:Class .
+
+
+###  http://example.org/maize-kg#DefisiensiUnsur
+<http://example.org/maize-kg#DefisiensiUnsur> rdf:type owl:Class .
+
+
+###  http://example.org/maize-kg#FaktorLingkungan
+<http://example.org/maize-kg#FaktorLingkungan> rdf:type owl:Class .
+
+
+###  http://example.org/maize-kg#Gejala
+<http://example.org/maize-kg#Gejala> rdf:type owl:Class .
+
+
+###  http://example.org/maize-kg#Hama
+<http://example.org/maize-kg#Hama> rdf:type owl:Class .
+
+
+###  http://example.org/maize-kg#MasalahTanaman
+<http://example.org/maize-kg#MasalahTanaman> rdf:type owl:Class .
+
+
+###  http://example.org/maize-kg#Patogen
+<http://example.org/maize-kg#Patogen> rdf:type owl:Class .
+
+
+###  http://example.org/maize-kg#Pencegahan
+<http://example.org/maize-kg#Pencegahan> rdf:type owl:Class .
+
+
+###  http://example.org/maize-kg#Pengendalian
+<http://example.org/maize-kg#Pengendalian> rdf:type owl:Class .
+
+
+###  http://example.org/maize-kg#PengendalianBiologis
+<http://example.org/maize-kg#PengendalianBiologis> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://example.org/maize-kg#Pengendalian> .
+
+
+###  http://example.org/maize-kg#PengendalianKimia
+<http://example.org/maize-kg#PengendalianKimia> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://example.org/maize-kg#Pengendalian> .
+
+
+###  http://example.org/maize-kg#PengendalianMekanis
+<http://example.org/maize-kg#PengendalianMekanis> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://example.org/maize-kg#Pengendalian> .
+
+
+###  http://example.org/maize-kg#Penyakit
+<http://example.org/maize-kg#Penyakit> rdf:type owl:Class .
+
+
+###  http://example.org/maize-kg#PenyakitBakteri
+<http://example.org/maize-kg#PenyakitBakteri> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://example.org/maize-kg#Penyakit> .
+
+
+###  http://example.org/maize-kg#PenyakitJamur
+<http://example.org/maize-kg#PenyakitJamur> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://example.org/maize-kg#Penyakit> .
+
+
+###  http://example.org/maize-kg#PenyakitVirus
+<http://example.org/maize-kg#PenyakitVirus> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://example.org/maize-kg#Penyakit> .
+
+
+###  http://example.org/maize-kg#Tanaman
+<http://example.org/maize-kg#Tanaman> rdf:type owl:Class .
+
+
+###  http://example.org/maize-kg#Vektor
+<http://example.org/maize-kg#Vektor> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/maize-kg#Bagrada_Bug
+<http://example.org/maize-kg#Bagrada_Bug> rdf:type owl:NamedIndividual ,
+                                                   <http://example.org/maize-kg#Hama> ,
+                                                   <http://example.org/maize-kg#MasalahTanaman> ;
+                                          <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#monitoring_rutin> ,
+                                                                                      <http://example.org/maize-kg#sanitasi_lahan> ;
+                                          <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#imidacloprid> ,
+                                                                                           <http://example.org/maize-kg#parasitoid_telur> ,
+                                                                                           <http://example.org/maize-kg#pyrethroid> ;
+                                          <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#kelembaban_rendah> ,
+                                                                                        <http://example.org/maize-kg#suhu_tinggi> ;
+                                          <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#serangga> ;
+                                          <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#bercak> ,
+                                                                                       <http://example.org/maize-kg#klorosis> ,
+                                                                                       <http://example.org/maize-kg#layu> ,
+                                                                                       <http://example.org/maize-kg#nekrosis> ;
+                                          <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#batang> ,
+                                                                                        <http://example.org/maize-kg#bunga> ,
+                                                                                        <http://example.org/maize-kg#daun> ,
+                                                                                        <http://example.org/maize-kg#pucuk> ;
+                                          <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                          <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#parasitoid_telur> ;
+                                          <http://example.org/maize-kg#namaIlmiah> "Bagrada hilaris" ;
+                                          <http://example.org/maize-kg#penyebabUtama> "bagrada_bug" .
+
+
+###  http://example.org/maize-kg#Boron_Deficiency
+<http://example.org/maize-kg#Boron_Deficiency> rdf:type owl:NamedIndividual ,
+                                                        <http://example.org/maize-kg#DefisiensiUnsur> ,
+                                                        <http://example.org/maize-kg#MasalahTanaman> ;
+                                               <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#hindari_pH_tinggi> ,
+                                                                                           <http://example.org/maize-kg#tes_tanah_rutin> ;
+                                               <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#boron_foliar> ,
+                                                                                                <http://example.org/maize-kg#pupuk_kandang> ;
+                                               <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#bahan_organik_rendah> ,
+                                                                                             <http://example.org/maize-kg#pH_tinggi> ,
+                                                                                             <http://example.org/maize-kg#tanah_berpasir> ;
+                                               <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#defisiensi> ;
+                                               <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#batang_rapuh> ,
+                                                                                            <http://example.org/maize-kg#daun_mengkerut> ,
+                                                                                            <http://example.org/maize-kg#daun_rapuh> ,
+                                                                                            <http://example.org/maize-kg#klorosis> ,
+                                                                                            <http://example.org/maize-kg#nekrosis> ;
+                                               <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#akar> ,
+                                                                                             <http://example.org/maize-kg#batang> ,
+                                                                                             <http://example.org/maize-kg#daun> ,
+                                                                                             <http://example.org/maize-kg#pucuk> ;
+                                               <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                               <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#boron_foliar> ,
+                                                                                                     <http://example.org/maize-kg#pupuk_kandang> ;
+                                               <http://example.org/maize-kg#namaIlmiah> "Boron Deficiency" ;
+                                               <http://example.org/maize-kg#penyebabUtama> "defisiensi_boron" .
+
+
+###  http://example.org/maize-kg#Brown_Stink_Bug
+<http://example.org/maize-kg#Brown_Stink_Bug> rdf:type owl:NamedIndividual ,
+                                                       <http://example.org/maize-kg#Hama> ,
+                                                       <http://example.org/maize-kg#MasalahTanaman> ;
+                                              <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#monitoring_rutin> ;
+                                              <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#pyrethroid> ,
+                                                                                               <http://example.org/maize-kg#tawon_parasitoid> ;
+                                              <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#suhu_tinggi> ;
+                                              <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#serangga> ;
+                                              <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#bercak> ,
+                                                                                           <http://example.org/maize-kg#busuk> ,
+                                                                                           <http://example.org/maize-kg#kerusakan> ;
+                                              <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#biji> ,
+                                                                                            <http://example.org/maize-kg#tongkol> ;
+                                              <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                              <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#tawon_parasitoid> ;
+                                              <http://example.org/maize-kg#namaIlmiah> "Euschistus servus" ;
+                                              <http://example.org/maize-kg#penyebabUtama> "euschistus_servus" .
+
+
+###  http://example.org/maize-kg#Cucumber_Beetle
+<http://example.org/maize-kg#Cucumber_Beetle> rdf:type owl:NamedIndividual ,
+                                                       <http://example.org/maize-kg#Hama> ,
+                                                       <http://example.org/maize-kg#MasalahTanaman> ,
+                                                       <http://example.org/maize-kg#Penyakit> ;
+                                              <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#rotasi_tanaman> ;
+                                              <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#acetamiprid> ,
+                                                                                               <http://example.org/maize-kg#jamur_beauveria> ,
+                                                                                               <http://example.org/maize-kg#nematoda> ,
+                                                                                               <http://example.org/maize-kg#perangkap> ,
+                                                                                               <http://example.org/maize-kg#pyrethroid> ;
+                                              <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#kelembaban_tinggi> ,
+                                                                                            <http://example.org/maize-kg#suhu_tinggi> ;
+                                              <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#serangga> ;
+                                              <http://example.org/maize-kg#disebarkanOleh> <http://example.org/maize-kg#diabrotica> ;
+                                              <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#busuk> ,
+                                                                                           <http://example.org/maize-kg#kerusakan> ,
+                                                                                           <http://example.org/maize-kg#layu> ;
+                                              <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#akar> ,
+                                                                                            <http://example.org/maize-kg#batang> ,
+                                                                                            <http://example.org/maize-kg#bunga> ,
+                                                                                            <http://example.org/maize-kg#daun> ;
+                                              <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                              <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#jamur_beauveria> ,
+                                                                                                    <http://example.org/maize-kg#nematoda> ,
+                                                                                                    <http://example.org/maize-kg#perangkap> ;
+                                              <http://example.org/maize-kg#namaIlmiah> "Diabrotica spp." ;
+                                              <http://example.org/maize-kg#penyebabUtama> "diabrotica" .
+
+
+###  http://example.org/maize-kg#Damping-Off_of_Seedlings
+<http://example.org/maize-kg#Damping-Off_of_Seedlings> rdf:type owl:NamedIndividual ,
+                                                                <http://example.org/maize-kg#MasalahTanaman> ,
+                                                                <http://example.org/maize-kg#Penyakit> ,
+                                                                <http://example.org/maize-kg#PenyakitJamur> ;
+                                                       <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#drainase_baik> ,
+                                                                                                   <http://example.org/maize-kg#varietas_tahan> ;
+                                                       <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#bacillus_subtilis> ,
+                                                                                                        <http://example.org/maize-kg#fungisida_copper> ,
+                                                                                                        <http://example.org/maize-kg#metalaxyl> ,
+                                                                                                        <http://example.org/maize-kg#pseudomonas> ,
+                                                                                                        <http://example.org/maize-kg#trichoderma> ;
+                                                       <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#kelembaban_tinggi> ,
+                                                                                                     <http://example.org/maize-kg#suhu_tinggi> ;
+                                                       <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#jamur> ;
+                                                       <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#busuk> ,
+                                                                                                    <http://example.org/maize-kg#klorosis> ,
+                                                                                                    <http://example.org/maize-kg#layu> ,
+                                                                                                    <http://example.org/maize-kg#nekrosis> ;
+                                                       <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#akar> ,
+                                                                                                     <http://example.org/maize-kg#batang> ,
+                                                                                                     <http://example.org/maize-kg#biji> ;
+                                                       <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                                       <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#bacillus_subtilis> ,
+                                                                                                             <http://example.org/maize-kg#fungisida_copper> ,
+                                                                                                             <http://example.org/maize-kg#metalaxyl> ,
+                                                                                                             <http://example.org/maize-kg#pseudomonas> ,
+                                                                                                             <http://example.org/maize-kg#trichoderma> ;
+                                                       <http://example.org/maize-kg#namaIlmiah> "Pythium spp." ;
+                                                       <http://example.org/maize-kg#penyebabUtama> "pythium" .
+
+
+###  http://example.org/maize-kg#Downy_Mildew_of_Maize
+<http://example.org/maize-kg#Downy_Mildew_of_Maize> rdf:type owl:NamedIndividual ,
+                                                             <http://example.org/maize-kg#MasalahTanaman> ,
+                                                             <http://example.org/maize-kg#Penyakit> ,
+                                                             <http://example.org/maize-kg#PenyakitJamur> ;
+                                                    <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#rotasi_tanaman> ,
+                                                                                                <http://example.org/maize-kg#sanitasi_lahan> ,
+                                                                                                <http://example.org/maize-kg#varietas_tahan> ;
+                                                    <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#cabut_tanaman_terinfeksi> ,
+                                                                                                     <http://example.org/maize-kg#mancozeb> ,
+                                                                                                     <http://example.org/maize-kg#metalaxyl> ;
+                                                    <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#jamur> ;
+                                                    <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#busuk> ,
+                                                                                                 <http://example.org/maize-kg#deformasi> ,
+                                                                                                 <http://example.org/maize-kg#tanaman_kerdil> ;
+                                                    <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#batang> ,
+                                                                                                  <http://example.org/maize-kg#bunga_jantan> ,
+                                                                                                  <http://example.org/maize-kg#daun> ;
+                                                    <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                                    <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#mancozeb> ,
+                                                                                                          <http://example.org/maize-kg#metalaxyl> ;
+                                                    <http://example.org/maize-kg#namaIlmiah> "Peronosclerospora sorghi" ;
+                                                    <http://example.org/maize-kg#penyebabUtama> "peronosclerospora_sorghi" .
+
+
+###  http://example.org/maize-kg#Fall_Armyworm
+<http://example.org/maize-kg#Fall_Armyworm> rdf:type owl:NamedIndividual ,
+                                                     <http://example.org/maize-kg#Hama> ,
+                                                     <http://example.org/maize-kg#MasalahTanaman> ;
+                                            <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#monitoring_rutin> ,
+                                                                                        <http://example.org/maize-kg#varietas_tahan> ;
+                                            <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#bacillus_thuringiensis> ,
+                                                                                             <http://example.org/maize-kg#chlorpyrifos> ,
+                                                                                             <http://example.org/maize-kg#neem_oil> ,
+                                                                                             <http://example.org/maize-kg#pengumpulan_manual> ,
+                                                                                             <http://example.org/maize-kg#perangkap> ,
+                                                                                             <http://example.org/maize-kg#tawon_parasitoid> ;
+                                            <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#kelembaban_tinggi> ,
+                                                                                          <http://example.org/maize-kg#suhu_tinggi> ;
+                                            <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#serangga> ;
+                                            <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#gugur_daun> ,
+                                                                                         <http://example.org/maize-kg#kerusakan> ;
+                                            <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#biji> ,
+                                                                                          <http://example.org/maize-kg#daun> ,
+                                                                                          <http://example.org/maize-kg#pucuk> ,
+                                                                                          <http://example.org/maize-kg#tongkol> ;
+                                            <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                            <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#bacillus_thuringiensis> ,
+                                                                                                  <http://example.org/maize-kg#neem_oil> ,
+                                                                                                  <http://example.org/maize-kg#pengumpulan_manual> ,
+                                                                                                  <http://example.org/maize-kg#perangkap> ,
+                                                                                                  <http://example.org/maize-kg#tawon_parasitoid> ;
+                                            <http://example.org/maize-kg#namaIlmiah> "Spodoptera frugiperda" ;
+                                            <http://example.org/maize-kg#penyebabUtama> "spodoptera_frugiperda" .
+
+
+###  http://example.org/maize-kg#Flower_Chafer
+<http://example.org/maize-kg#Flower_Chafer> rdf:type owl:NamedIndividual ,
+                                                     <http://example.org/maize-kg#Hama> ,
+                                                     <http://example.org/maize-kg#MasalahTanaman> ;
+                                            <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#monitoring_rutin> ,
+                                                                                        <http://example.org/maize-kg#rotasi_tanaman> ;
+                                            <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#serangga> ;
+                                            <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#kerusakan> ,
+                                                                                         <http://example.org/maize-kg#penurunan_hasil> ;
+                                            <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#bunga> ,
+                                                                                          <http://example.org/maize-kg#pucuk> ;
+                                            <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                            <http://example.org/maize-kg#namaIlmiah> "Oxycetonia versicolor" ;
+                                            <http://example.org/maize-kg#penyebabUtama> "kumbang_flower_chafer" .
+
+
+###  http://example.org/maize-kg#Foot_and_Collar_Rot
+<http://example.org/maize-kg#Foot_and_Collar_Rot> rdf:type owl:NamedIndividual ,
+                                                           <http://example.org/maize-kg#MasalahTanaman> ,
+                                                           <http://example.org/maize-kg#Penyakit> ,
+                                                           <http://example.org/maize-kg#PenyakitJamur> ;
+                                                  <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#drainase_baik> ,
+                                                                                              <http://example.org/maize-kg#sanitasi_lahan> ,
+                                                                                              <http://example.org/maize-kg#varietas_tahan> ;
+                                                  <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#bacillus_subtilis> ,
+                                                                                                   <http://example.org/maize-kg#cabut_tanaman_terinfeksi> ,
+                                                                                                   <http://example.org/maize-kg#metam_sodium> ,
+                                                                                                   <http://example.org/maize-kg#trichoderma> ;
+                                                  <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#kelembaban_tinggi> ,
+                                                                                                <http://example.org/maize-kg#pH_rendah> ,
+                                                                                                <http://example.org/maize-kg#suhu_tinggi> ;
+                                                  <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#jamur> ;
+                                                  <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#busuk> ,
+                                                                                               <http://example.org/maize-kg#klorosis> ,
+                                                                                               <http://example.org/maize-kg#layu> ,
+                                                                                               <http://example.org/maize-kg#nekrosis> ;
+                                                  <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#akar> ,
+                                                                                                <http://example.org/maize-kg#batang> ,
+                                                                                                <http://example.org/maize-kg#daun> ;
+                                                  <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                                  <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#bacillus_subtilis> ,
+                                                                                                        <http://example.org/maize-kg#metam_sodium> ,
+                                                                                                        <http://example.org/maize-kg#trichoderma> ;
+                                                  <http://example.org/maize-kg#namaIlmiah> "Athelia rolfsii" ;
+                                                  <http://example.org/maize-kg#penyebabUtama> "athelia_rolfsii" .
+
+
+###  http://example.org/maize-kg#Fruit_Molds
+<http://example.org/maize-kg#Fruit_Molds> rdf:type owl:NamedIndividual ,
+                                                   <http://example.org/maize-kg#MasalahTanaman> ,
+                                                   <http://example.org/maize-kg#Penyakit> ,
+                                                   <http://example.org/maize-kg#PenyakitJamur> ;
+                                          <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#penyiraman_tepat> ;
+                                          <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#chlorothalonil> ,
+                                                                                           <http://example.org/maize-kg#fungisida_copper> ;
+                                          <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#kelembaban_tinggi> ,
+                                                                                        <http://example.org/maize-kg#suhu_tinggi> ;
+                                          <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#jamur> ;
+                                          <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#bercak> ,
+                                                                                       <http://example.org/maize-kg#busuk> ;
+                                          <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#biji> ,
+                                                                                        <http://example.org/maize-kg#tongkol> ;
+                                          <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                          <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#chlorothalonil> ,
+                                                                                                <http://example.org/maize-kg#fungisida_copper> ;
+                                          <http://example.org/maize-kg#namaIlmiah> "Aspergillus spp." ;
+                                          <http://example.org/maize-kg#penyebabUtama> "aspergillus" .
+
+
+###  http://example.org/maize-kg#Helicoverpa_Caterpillar
+<http://example.org/maize-kg#Helicoverpa_Caterpillar> rdf:type owl:NamedIndividual ,
+                                                               <http://example.org/maize-kg#Hama> ,
+                                                               <http://example.org/maize-kg#MasalahTanaman> ;
+                                                      <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#monitoring_rutin> ,
+                                                                                                  <http://example.org/maize-kg#varietas_tahan> ;
+                                                      <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#bacillus_thuringiensis> ,
+                                                                                                       <http://example.org/maize-kg#chlorpyrifos> ,
+                                                                                                       <http://example.org/maize-kg#neem_oil> ,
+                                                                                                       <http://example.org/maize-kg#pengumpulan_manual> ,
+                                                                                                       <http://example.org/maize-kg#perangkap> ,
+                                                                                                       <http://example.org/maize-kg#tawon_parasitoid> ;
+                                                      <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#serangga> ;
+                                                      <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#busuk> ,
+                                                                                                   <http://example.org/maize-kg#kerusakan> ;
+                                                      <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#bunga> ,
+                                                                                                    <http://example.org/maize-kg#daun> ,
+                                                                                                    <http://example.org/maize-kg#pucuk> ,
+                                                                                                    <http://example.org/maize-kg#tongkol> ;
+                                                      <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                                      <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#bacillus_thuringiensis> ,
+                                                                                                            <http://example.org/maize-kg#neem_oil> ,
+                                                                                                            <http://example.org/maize-kg#pengumpulan_manual> ,
+                                                                                                            <http://example.org/maize-kg#perangkap> ,
+                                                                                                            <http://example.org/maize-kg#tawon_parasitoid> ;
+                                                      <http://example.org/maize-kg#namaIlmiah> "Helicoverpa armigera" ;
+                                                      <http://example.org/maize-kg#penyebabUtama> "helicoverpa_armigera" .
+
+
+###  http://example.org/maize-kg#Iron_Deficiency
+<http://example.org/maize-kg#Iron_Deficiency> rdf:type owl:NamedIndividual ,
+                                                       <http://example.org/maize-kg#DefisiensiUnsur> ,
+                                                       <http://example.org/maize-kg#MasalahTanaman> ;
+                                              <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#drainase_baik> ,
+                                                                                          <http://example.org/maize-kg#hindari_pH_tinggi> ;
+                                              <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#ferrous_sulphate> ,
+                                                                                               <http://example.org/maize-kg#kompos> ,
+                                                                                               <http://example.org/maize-kg#pupuk_kandang> ;
+                                              <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#drainase_buruk> ,
+                                                                                            <http://example.org/maize-kg#pH_tinggi> ,
+                                                                                            <http://example.org/maize-kg#suhu_rendah> ;
+                                              <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#defisiensi> ;
+                                              <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#klorosis> ,
+                                                                                           <http://example.org/maize-kg#nekrosis> ,
+                                                                                           <http://example.org/maize-kg#tanaman_kerdil> ;
+                                              <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#daun> ;
+                                              <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                              <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#ferrous_sulphate> ,
+                                                                                                    <http://example.org/maize-kg#kompos> ,
+                                                                                                    <http://example.org/maize-kg#pupuk_kandang> ;
+                                              <http://example.org/maize-kg#namaIlmiah> "Iron Deficiency" ;
+                                              <http://example.org/maize-kg#penyebabUtama> "defisiensi_zat_besi" .
+
+
+###  http://example.org/maize-kg#Jagung
+<http://example.org/maize-kg#Jagung> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/maize-kg#Tanaman> ;
+                                     <http://example.org/maize-kg#namaIlmiah> "Zea mays" .
+
+
+###  http://example.org/maize-kg#Leaf_Spot_of_Maize
+<http://example.org/maize-kg#Leaf_Spot_of_Maize> rdf:type owl:NamedIndividual ,
+                                                          <http://example.org/maize-kg#MasalahTanaman> ,
+                                                          <http://example.org/maize-kg#Penyakit> ,
+                                                          <http://example.org/maize-kg#PenyakitJamur> ;
+                                                 <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#sanitasi_lahan> ,
+                                                                                             <http://example.org/maize-kg#varietas_tahan> ;
+                                                 <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#chlorothalonil> ,
+                                                                                                  <http://example.org/maize-kg#mancozeb> ;
+                                                 <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#kelembaban_tinggi> ,
+                                                                                               <http://example.org/maize-kg#suhu_tinggi> ;
+                                                 <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#jamur> ;
+                                                 <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#bercak> ,
+                                                                                              <http://example.org/maize-kg#busuk> ,
+                                                                                              <http://example.org/maize-kg#klorosis> ,
+                                                                                              <http://example.org/maize-kg#nekrosis> ;
+                                                 <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#biji> ,
+                                                                                               <http://example.org/maize-kg#daun> ;
+                                                 <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                                 <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#chlorothalonil> ,
+                                                                                                       <http://example.org/maize-kg#mancozeb> ;
+                                                 <http://example.org/maize-kg#namaIlmiah> "Cochliobolus lunatus" ;
+                                                 <http://example.org/maize-kg#penyebabUtama> "cochliobolus_lunatus" .
+
+
+###  http://example.org/maize-kg#Lesser_Stalk_Borer_of_Maize
+<http://example.org/maize-kg#Lesser_Stalk_Borer_of_Maize> rdf:type owl:NamedIndividual ,
+                                                                   <http://example.org/maize-kg#Hama> ,
+                                                                   <http://example.org/maize-kg#MasalahTanaman> ;
+                                                          <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#monitoring_rutin> ;
+                                                          <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#bacillus_thuringiensis> ,
+                                                                                                           <http://example.org/maize-kg#chlorpyrifos> ,
+                                                                                                           <http://example.org/maize-kg#jamur_beauveria> ,
+                                                                                                           <http://example.org/maize-kg#perangkap> ,
+                                                                                                           <http://example.org/maize-kg#tawon_parasitoid> ;
+                                                          <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#suhu_tinggi> ;
+                                                          <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#serangga> ;
+                                                          <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#kerusakan> ,
+                                                                                                       <http://example.org/maize-kg#layu> ,
+                                                                                                       <http://example.org/maize-kg#nekrosis> ,
+                                                                                                       <http://example.org/maize-kg#tanaman_kerdil> ;
+                                                          <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#batang> ,
+                                                                                                        <http://example.org/maize-kg#daun> ;
+                                                          <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                                          <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#bacillus_thuringiensis> ,
+                                                                                                                <http://example.org/maize-kg#jamur_beauveria> ,
+                                                                                                                <http://example.org/maize-kg#perangkap> ,
+                                                                                                                <http://example.org/maize-kg#tawon_parasitoid> ;
+                                                          <http://example.org/maize-kg#namaIlmiah> "Elasmopalpus lignosellus" ;
+                                                          <http://example.org/maize-kg#penyebabUtama> "elasmopalpus_lignosellus" .
+
+
+###  http://example.org/maize-kg#Maize_Bushy_Stunt_Phytoplasma
+<http://example.org/maize-kg#Maize_Bushy_Stunt_Phytoplasma> rdf:type owl:NamedIndividual ,
+                                                                     <http://example.org/maize-kg#MasalahTanaman> ,
+                                                                     <http://example.org/maize-kg#Penyakit> ,
+                                                                     <http://example.org/maize-kg#PenyakitBakteri> ;
+                                                            <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#eradikasi_tanaman_sakit> ,
+                                                                                                        <http://example.org/maize-kg#monitoring_rutin> ,
+                                                                                                        <http://example.org/maize-kg#varietas_tahan> ;
+                                                            <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#cabut_tanaman_terinfeksi> ,
+                                                                                                             <http://example.org/maize-kg#insektisida_vektor> ,
+                                                                                                             <http://example.org/maize-kg#jamur_beauveria> ,
+                                                                                                             <http://example.org/maize-kg#jamur_metarhizium> ;
+                                                            <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#suhu_tinggi> ;
+                                                            <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#bakteri> ;
+                                                            <http://example.org/maize-kg#disebarkanOleh> <http://example.org/maize-kg#wereng> ;
+                                                            <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#deformasi> ,
+                                                                                                         <http://example.org/maize-kg#klorosis> ,
+                                                                                                         <http://example.org/maize-kg#tanaman_kerdil> ;
+                                                            <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#batang> ,
+                                                                                                          <http://example.org/maize-kg#bunga_jantan> ,
+                                                                                                          <http://example.org/maize-kg#daun> ,
+                                                                                                          <http://example.org/maize-kg#tongkol> ;
+                                                            <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                                            <http://example.org/maize-kg#namaIlmiah> "Phytoplasma asteris" ;
+                                                            <http://example.org/maize-kg#penyebabUtama> "phytoplasma_asteris" .
+
+
+###  http://example.org/maize-kg#Maize_Chlorotic_Mottle_Virus
+<http://example.org/maize-kg#Maize_Chlorotic_Mottle_Virus> rdf:type owl:NamedIndividual ,
+                                                                    <http://example.org/maize-kg#MasalahTanaman> ,
+                                                                    <http://example.org/maize-kg#Penyakit> ,
+                                                                    <http://example.org/maize-kg#PenyakitVirus> ;
+                                                           <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#eradikasi_tanaman_sakit> ,
+                                                                                                       <http://example.org/maize-kg#monitoring_rutin> ,
+                                                                                                       <http://example.org/maize-kg#rotasi_tanaman> ,
+                                                                                                       <http://example.org/maize-kg#varietas_tahan> ;
+                                                           <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#cabut_tanaman_terinfeksi> ,
+                                                                                                            <http://example.org/maize-kg#insektisida_vektor> ;
+                                                           <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#kelembaban_tinggi> ,
+                                                                                                         <http://example.org/maize-kg#suhu_tinggi> ;
+                                                           <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#virus> ;
+                                                           <http://example.org/maize-kg#disebarkanOleh> <http://example.org/maize-kg#kumbang> ,
+                                                                                                        <http://example.org/maize-kg#thrips> ,
+                                                                                                        <http://example.org/maize-kg#tungau> ,
+                                                                                                        <http://example.org/maize-kg#wereng> ;
+                                                           <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#bercak> ,
+                                                                                                        <http://example.org/maize-kg#deformasi> ,
+                                                                                                        <http://example.org/maize-kg#klorosis> ,
+                                                                                                        <http://example.org/maize-kg#nekrosis> ,
+                                                                                                        <http://example.org/maize-kg#tanaman_kerdil> ;
+                                                           <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#bunga_jantan> ,
+                                                                                                         <http://example.org/maize-kg#daun> ,
+                                                                                                         <http://example.org/maize-kg#tongkol> ;
+                                                           <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                                           <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#insektisida_vektor> ;
+                                                           <http://example.org/maize-kg#namaIlmiah> "MCMV" ;
+                                                           <http://example.org/maize-kg#penyebabUtama> "virus_mcmv" .
+
+
+###  http://example.org/maize-kg#Maize_Lethal_Necrosis_Disease
+<http://example.org/maize-kg#Maize_Lethal_Necrosis_Disease> rdf:type owl:NamedIndividual ,
+                                                                     <http://example.org/maize-kg#MasalahTanaman> ,
+                                                                     <http://example.org/maize-kg#Penyakit> ,
+                                                                     <http://example.org/maize-kg#PenyakitVirus> ;
+                                                            <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#eradikasi_tanaman_sakit> ,
+                                                                                                        <http://example.org/maize-kg#monitoring_rutin> ,
+                                                                                                        <http://example.org/maize-kg#rotasi_tanaman> ,
+                                                                                                        <http://example.org/maize-kg#varietas_tahan> ;
+                                                            <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#cabut_tanaman_terinfeksi> ,
+                                                                                                             <http://example.org/maize-kg#insektisida_vektor> ;
+                                                            <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#virus> ;
+                                                            <http://example.org/maize-kg#disebarkanOleh> <http://example.org/maize-kg#kumbang> ,
+                                                                                                         <http://example.org/maize-kg#thrips> ;
+                                                            <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#busuk> ,
+                                                                                                         <http://example.org/maize-kg#deformasi> ,
+                                                                                                         <http://example.org/maize-kg#klorosis> ,
+                                                                                                         <http://example.org/maize-kg#nekrosis> ,
+                                                                                                         <http://example.org/maize-kg#tanaman_kerdil> ;
+                                                            <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#batang> ,
+                                                                                                          <http://example.org/maize-kg#daun> ,
+                                                                                                          <http://example.org/maize-kg#tongkol> ;
+                                                            <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                                            <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#insektisida_vektor> ;
+                                                            <http://example.org/maize-kg#namaIlmiah> "MLND" ;
+                                                            <http://example.org/maize-kg#penyebabUtama> "virus_mlnd" .
+
+
+###  http://example.org/maize-kg#Maize_Smut
+<http://example.org/maize-kg#Maize_Smut> rdf:type owl:NamedIndividual ,
+                                                  <http://example.org/maize-kg#MasalahTanaman> ,
+                                                  <http://example.org/maize-kg#Penyakit> ,
+                                                  <http://example.org/maize-kg#PenyakitJamur> ;
+                                         <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#monitoring_rutin> ,
+                                                                                     <http://example.org/maize-kg#sanitasi_lahan> ,
+                                                                                     <http://example.org/maize-kg#varietas_tahan> ;
+                                         <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#cabut_tanaman_terinfeksi> ;
+                                         <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#kelembaban_tinggi> ;
+                                         <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#jamur> ;
+                                         <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#busuk> ,
+                                                                                      <http://example.org/maize-kg#deformasi> ,
+                                                                                      <http://example.org/maize-kg#tanaman_kerdil> ;
+                                         <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#batang> ,
+                                                                                       <http://example.org/maize-kg#daun> ,
+                                                                                       <http://example.org/maize-kg#tongkol> ;
+                                         <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                         <http://example.org/maize-kg#namaIlmiah> "Ustilago maydis" ;
+                                         <http://example.org/maize-kg#penyebabUtama> "ustilago_maydis" .
+
+
+###  http://example.org/maize-kg#Nitrogen_Deficiency
+<http://example.org/maize-kg#Nitrogen_Deficiency> rdf:type owl:NamedIndividual ,
+                                                           <http://example.org/maize-kg#DefisiensiUnsur> ,
+                                                           <http://example.org/maize-kg#MasalahTanaman> ;
+                                                  <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#drainase_baik> ,
+                                                                                              <http://example.org/maize-kg#tes_tanah_rutin> ;
+                                                  <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#ammonium_nitrate> ,
+                                                                                                   <http://example.org/maize-kg#kompos> ,
+                                                                                                   <http://example.org/maize-kg#pupuk_kandang> ,
+                                                                                                   <http://example.org/maize-kg#urea> ;
+                                                  <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#kelembaban_tinggi> ,
+                                                                                                <http://example.org/maize-kg#tanah_berpasir> ;
+                                                  <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#defisiensi> ;
+                                                  <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#klorosis> ,
+                                                                                               <http://example.org/maize-kg#layu> ,
+                                                                                               <http://example.org/maize-kg#tanaman_kerdil> ;
+                                                  <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#daun> ;
+                                                  <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                                  <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#ammonium_nitrate> ,
+                                                                                                        <http://example.org/maize-kg#kompos> ,
+                                                                                                        <http://example.org/maize-kg#pupuk_kandang> ,
+                                                                                                        <http://example.org/maize-kg#urea> ;
+                                                  <http://example.org/maize-kg#namaIlmiah> "Nitrogen Deficiency" ;
+                                                  <http://example.org/maize-kg#penyebabUtama> "defisiensi_nitrogen" .
+
+
+###  http://example.org/maize-kg#Northern_Leaf_Spot_of_Maize
+<http://example.org/maize-kg#Northern_Leaf_Spot_of_Maize> rdf:type owl:NamedIndividual ,
+                                                                   <http://example.org/maize-kg#MasalahTanaman> ,
+                                                                   <http://example.org/maize-kg#Penyakit> ,
+                                                                   <http://example.org/maize-kg#PenyakitJamur> ;
+                                                          <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#rotasi_tanaman> ,
+                                                                                                      <http://example.org/maize-kg#varietas_tahan> ;
+                                                          <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#mancozeb> ;
+                                                          <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#kelembaban_tinggi> ;
+                                                          <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#jamur> ;
+                                                          <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#bercak> ,
+                                                                                                       <http://example.org/maize-kg#busuk> ;
+                                                          <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#daun> ,
+                                                                                                        <http://example.org/maize-kg#tongkol> ;
+                                                          <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                                          <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#mancozeb> ;
+                                                          <http://example.org/maize-kg#namaIlmiah> "Cochliobolus carbonum" ;
+                                                          <http://example.org/maize-kg#penyebabUtama> "cochliobolus_carbonum" .
+
+
+###  http://example.org/maize-kg#Shoot_Flies
+<http://example.org/maize-kg#Shoot_Flies> rdf:type owl:NamedIndividual ,
+                                                   <http://example.org/maize-kg#Hama> ,
+                                                   <http://example.org/maize-kg#MasalahTanaman> ;
+                                          <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#rotasi_tanaman> ,
+                                                                                      <http://example.org/maize-kg#sanitasi_lahan> ,
+                                                                                      <http://example.org/maize-kg#varietas_tahan> ;
+                                          <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#pyrethroid> ;
+                                          <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#serangga> ;
+                                          <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#kerusakan> ,
+                                                                                       <http://example.org/maize-kg#klorosis> ,
+                                                                                       <http://example.org/maize-kg#layu> ,
+                                                                                       <http://example.org/maize-kg#nekrosis> ,
+                                                                                       <http://example.org/maize-kg#tanaman_kerdil> ;
+                                          <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#batang> ,
+                                                                                        <http://example.org/maize-kg#daun> ,
+                                                                                        <http://example.org/maize-kg#pucuk> ;
+                                          <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                          <http://example.org/maize-kg#namaIlmiah> "Atherigona sp." ;
+                                          <http://example.org/maize-kg#penyebabUtama> "atherigona" .
+
+
+###  http://example.org/maize-kg#Sooty_Mold
+<http://example.org/maize-kg#Sooty_Mold> rdf:type owl:NamedIndividual ,
+                                                  <http://example.org/maize-kg#MasalahTanaman> ,
+                                                  <http://example.org/maize-kg#Penyakit> ,
+                                                  <http://example.org/maize-kg#PenyakitJamur> ;
+                                         <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#jarak_tanam_optimal> ;
+                                         <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#insektisida_organophosphate> ,
+                                                                                          <http://example.org/maize-kg#neem_oil> ;
+                                         <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#kelembaban_tinggi> ;
+                                         <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#jamur> ;
+                                         <http://example.org/maize-kg#disebarkanOleh> <http://example.org/maize-kg#kutu_daun> ,
+                                                                                      <http://example.org/maize-kg#wereng> ;
+                                         <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#busuk> ,
+                                                                                      <http://example.org/maize-kg#gugur_daun> ;
+                                         <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#daun> ;
+                                         <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                         <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#insektisida_organophosphate> ,
+                                                                                               <http://example.org/maize-kg#neem_oil> ;
+                                         <http://example.org/maize-kg#namaIlmiah> "Pezizomycotina" ;
+                                         <http://example.org/maize-kg#penyebabUtama> "pezizomycotina" .
+
+
+###  http://example.org/maize-kg#Spotted_Maize_Beetle
+<http://example.org/maize-kg#Spotted_Maize_Beetle> rdf:type owl:NamedIndividual ,
+                                                            <http://example.org/maize-kg#Hama> ,
+                                                            <http://example.org/maize-kg#MasalahTanaman> ;
+                                                   <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#rotasi_tanaman> ;
+                                                   <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#perangkap> ;
+                                                   <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#suhu_tinggi> ;
+                                                   <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#serangga> ;
+                                                   <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#kerusakan> ;
+                                                   <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#biji> ,
+                                                                                                 <http://example.org/maize-kg#bunga> ;
+                                                   <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                                   <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#perangkap> ;
+                                                   <http://example.org/maize-kg#namaIlmiah> "Astylus atromaculatus" ;
+                                                   <http://example.org/maize-kg#penyebabUtama> "astylus_atromaculatus" .
+
+
+###  http://example.org/maize-kg#Spotted_Stemborer
+<http://example.org/maize-kg#Spotted_Stemborer> rdf:type owl:NamedIndividual ,
+                                                         <http://example.org/maize-kg#Hama> ,
+                                                         <http://example.org/maize-kg#MasalahTanaman> ;
+                                                <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#monitoring_rutin> ,
+                                                                                            <http://example.org/maize-kg#rotasi_tanaman> ,
+                                                                                            <http://example.org/maize-kg#varietas_tahan> ;
+                                                <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#bacillus_thuringiensis> ,
+                                                                                                 <http://example.org/maize-kg#cabut_tanaman_terinfeksi> ,
+                                                                                                 <http://example.org/maize-kg#deltamethrin> ,
+                                                                                                 <http://example.org/maize-kg#tawon_parasitoid> ;
+                                                <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#kelembaban_tinggi> ,
+                                                                                              <http://example.org/maize-kg#suhu_tinggi> ;
+                                                <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#serangga> ;
+                                                <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#busuk> ,
+                                                                                             <http://example.org/maize-kg#kerusakan> ,
+                                                                                             <http://example.org/maize-kg#nekrosis> ,
+                                                                                             <http://example.org/maize-kg#tanaman_kerdil> ;
+                                                <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#batang> ,
+                                                                                              <http://example.org/maize-kg#daun> ;
+                                                <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                                <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#bacillus_thuringiensis> ,
+                                                                                                      <http://example.org/maize-kg#cabut_tanaman_terinfeksi> ,
+                                                                                                      <http://example.org/maize-kg#tawon_parasitoid> ;
+                                                <http://example.org/maize-kg#namaIlmiah> "Chilo partellus" ;
+                                                <http://example.org/maize-kg#penyebabUtama> "chilo_partellus" .
+
+
+###  http://example.org/maize-kg#Stalk_Rot_of_Maize
+<http://example.org/maize-kg#Stalk_Rot_of_Maize> rdf:type owl:NamedIndividual ,
+                                                          <http://example.org/maize-kg#MasalahTanaman> ,
+                                                          <http://example.org/maize-kg#Penyakit> ,
+                                                          <http://example.org/maize-kg#PenyakitJamur> ;
+                                                 <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#rotasi_tanaman> ,
+                                                                                             <http://example.org/maize-kg#varietas_tahan> ;
+                                                 <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#cabut_tanaman_terinfeksi> ,
+                                                                                                  <http://example.org/maize-kg#carbendazim> ,
+                                                                                                  <http://example.org/maize-kg#mancozeb> ,
+                                                                                                  <http://example.org/maize-kg#neem_oil> ,
+                                                                                                  <http://example.org/maize-kg#pseudomonas> ,
+                                                                                                  <http://example.org/maize-kg#trichoderma> ;
+                                                 <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#kelembaban_tinggi> ,
+                                                                                               <http://example.org/maize-kg#suhu_tinggi> ;
+                                                 <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#jamur> ;
+                                                 <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#bercak> ,
+                                                                                              <http://example.org/maize-kg#busuk> ,
+                                                                                              <http://example.org/maize-kg#klorosis> ,
+                                                                                              <http://example.org/maize-kg#nekrosis> ,
+                                                                                              <http://example.org/maize-kg#tanaman_kerdil> ;
+                                                 <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#batang> ,
+                                                                                               <http://example.org/maize-kg#biji> ,
+                                                                                               <http://example.org/maize-kg#daun> ,
+                                                                                               <http://example.org/maize-kg#tongkol> ;
+                                                 <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                                 <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#carbendazim> ,
+                                                                                                       <http://example.org/maize-kg#mancozeb> ,
+                                                                                                       <http://example.org/maize-kg#neem_oil> ,
+                                                                                                       <http://example.org/maize-kg#pseudomonas> ,
+                                                                                                       <http://example.org/maize-kg#trichoderma> ;
+                                                 <http://example.org/maize-kg#namaIlmiah> "Gibberella fujikuroi" ;
+                                                 <http://example.org/maize-kg#penyebabUtama> "gibberella_fujikuroi" .
+
+
+###  http://example.org/maize-kg#Stunt_of_Maize
+<http://example.org/maize-kg#Stunt_of_Maize> rdf:type owl:NamedIndividual ,
+                                                      <http://example.org/maize-kg#MasalahTanaman> ,
+                                                      <http://example.org/maize-kg#Penyakit> ,
+                                                      <http://example.org/maize-kg#PenyakitBakteri> ;
+                                             <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#monitoring_rutin> ,
+                                                                                         <http://example.org/maize-kg#rotasi_tanaman> ,
+                                                                                         <http://example.org/maize-kg#varietas_tahan> ;
+                                             <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#jamur_beauveria> ,
+                                                                                              <http://example.org/maize-kg#jamur_metarhizium> ;
+                                             <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#suhu_tinggi> ;
+                                             <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#bakteri> ;
+                                             <http://example.org/maize-kg#disebarkanOleh> <http://example.org/maize-kg#wereng> ;
+                                             <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#bercak> ,
+                                                                                          <http://example.org/maize-kg#deformasi> ,
+                                                                                          <http://example.org/maize-kg#klorosis> ,
+                                                                                          <http://example.org/maize-kg#layu> ,
+                                                                                          <http://example.org/maize-kg#tanaman_kerdil> ;
+                                             <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#batang> ,
+                                                                                           <http://example.org/maize-kg#daun> ,
+                                                                                           <http://example.org/maize-kg#tongkol> ;
+                                             <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                             <http://example.org/maize-kg#namaIlmiah> "Spiroplasma kunkelii" ;
+                                             <http://example.org/maize-kg#penyebabUtama> "spiroplasma_kunkelii" .
+
+
+###  http://example.org/maize-kg#Sugarcane_Pyrilla
+<http://example.org/maize-kg#Sugarcane_Pyrilla> rdf:type owl:NamedIndividual ,
+                                                         <http://example.org/maize-kg#Hama> ,
+                                                         <http://example.org/maize-kg#MasalahTanaman> ;
+                                                <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#monitoring_rutin> ,
+                                                                                            <http://example.org/maize-kg#sanitasi_lahan> ;
+                                                <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#chlorpyrifos> ,
+                                                                                                 <http://example.org/maize-kg#parasitoid_telur> ;
+                                                <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#kelembaban_tinggi> ;
+                                                <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#serangga> ;
+                                                <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#klorosis> ,
+                                                                                             <http://example.org/maize-kg#nekrosis> ,
+                                                                                             <http://example.org/maize-kg#penurunan_hasil> ,
+                                                                                             <http://example.org/maize-kg#tanaman_kerdil> ;
+                                                <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#daun> ;
+                                                <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                                <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#parasitoid_telur> ;
+                                                <http://example.org/maize-kg#namaIlmiah> "Pyrilla perpusilla" ;
+                                                <http://example.org/maize-kg#penyebabUtama> "pyrilla_perpusilla" .
+
+
+###  http://example.org/maize-kg#Termites
+<http://example.org/maize-kg#Termites> rdf:type owl:NamedIndividual ,
+                                                <http://example.org/maize-kg#Hama> ,
+                                                <http://example.org/maize-kg#MasalahTanaman> ;
+                                       <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#monitoring_rutin> ,
+                                                                                   <http://example.org/maize-kg#sanitasi_lahan> ;
+                                       <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#chlorpyrifos> ,
+                                                                                        <http://example.org/maize-kg#deltamethrin> ,
+                                                                                        <http://example.org/maize-kg#imidacloprid> ,
+                                                                                        <http://example.org/maize-kg#jamur_beauveria> ,
+                                                                                        <http://example.org/maize-kg#neem_oil> ,
+                                                                                        <http://example.org/maize-kg#nematoda> ;
+                                       <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#serangga> ;
+                                       <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#busuk> ,
+                                                                                    <http://example.org/maize-kg#kerusakan> ,
+                                                                                    <http://example.org/maize-kg#layu> ;
+                                       <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#akar> ,
+                                                                                     <http://example.org/maize-kg#batang> ;
+                                       <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                       <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#jamur_beauveria> ,
+                                                                                             <http://example.org/maize-kg#neem_oil> ,
+                                                                                             <http://example.org/maize-kg#nematoda> ;
+                                       <http://example.org/maize-kg#namaIlmiah> "Termitidae" ;
+                                       <http://example.org/maize-kg#penyebabUtama> "termites" .
+
+
+###  http://example.org/maize-kg#Tobacco_Caterpillar
+<http://example.org/maize-kg#Tobacco_Caterpillar> rdf:type owl:NamedIndividual ,
+                                                           <http://example.org/maize-kg#Hama> ,
+                                                           <http://example.org/maize-kg#MasalahTanaman> ;
+                                                  <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#monitoring_rutin> ,
+                                                                                              <http://example.org/maize-kg#varietas_tahan> ;
+                                                  <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#bacillus_thuringiensis> ,
+                                                                                                   <http://example.org/maize-kg#chlorpyrifos> ,
+                                                                                                   <http://example.org/maize-kg#neem_oil> ,
+                                                                                                   <http://example.org/maize-kg#npv> ,
+                                                                                                   <http://example.org/maize-kg#pengumpulan_manual> ,
+                                                                                                   <http://example.org/maize-kg#perangkap> ;
+                                                  <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#suhu_tinggi> ;
+                                                  <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#serangga> ;
+                                                  <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#gugur_daun> ,
+                                                                                               <http://example.org/maize-kg#kerusakan> ;
+                                                  <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#akar> ,
+                                                                                                <http://example.org/maize-kg#bunga> ,
+                                                                                                <http://example.org/maize-kg#daun> ;
+                                                  <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                                  <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#bacillus_thuringiensis> ,
+                                                                                                        <http://example.org/maize-kg#neem_oil> ,
+                                                                                                        <http://example.org/maize-kg#npv> ,
+                                                                                                        <http://example.org/maize-kg#pengumpulan_manual> ,
+                                                                                                        <http://example.org/maize-kg#perangkap> ;
+                                                  <http://example.org/maize-kg#namaIlmiah> "Spodoptera litura" ;
+                                                  <http://example.org/maize-kg#penyebabUtama> "spodoptera_litura" .
+
+
+###  http://example.org/maize-kg#Zinc_Deficiency
+<http://example.org/maize-kg#Zinc_Deficiency> rdf:type owl:NamedIndividual ,
+                                                       <http://example.org/maize-kg#DefisiensiUnsur> ,
+                                                       <http://example.org/maize-kg#MasalahTanaman> ;
+                                              <http://example.org/maize-kg#dicegahDengan> <http://example.org/maize-kg#hindari_pH_tinggi> ,
+                                                                                          <http://example.org/maize-kg#tes_tanah_rutin> ;
+                                              <http://example.org/maize-kg#dikendalikanDengan> <http://example.org/maize-kg#pupuk_kandang> ,
+                                                                                               <http://example.org/maize-kg#zinc_sulfate> ;
+                                              <http://example.org/maize-kg#dipengaruhiOleh> <http://example.org/maize-kg#pH_tinggi> ,
+                                                                                            <http://example.org/maize-kg#tanah_berpasir> ;
+                                              <http://example.org/maize-kg#disebabkanOleh> <http://example.org/maize-kg#defisiensi> ;
+                                              <http://example.org/maize-kg#memilikiGejala> <http://example.org/maize-kg#deformasi> ,
+                                                                                           <http://example.org/maize-kg#klorosis> ,
+                                                                                           <http://example.org/maize-kg#nekrosis> ,
+                                                                                           <http://example.org/maize-kg#tanaman_kerdil> ;
+                                              <http://example.org/maize-kg#menyerangBagian> <http://example.org/maize-kg#daun> ;
+                                              <http://example.org/maize-kg#menyerangTanaman> <http://example.org/maize-kg#Jagung> ;
+                                              <http://example.org/maize-kg#rekomendasiPengendalian> <http://example.org/maize-kg#pupuk_kandang> ,
+                                                                                                    <http://example.org/maize-kg#zinc_sulfate> ;
+                                              <http://example.org/maize-kg#namaIlmiah> "Zinc Deficiency" ;
+                                              <http://example.org/maize-kg#penyebabUtama> "defisiensi_zinc" .
+
+
+###  http://example.org/maize-kg#acetamiprid
+<http://example.org/maize-kg#acetamiprid> rdf:type owl:NamedIndividual ,
+                                                   <http://example.org/maize-kg#Pengendalian> ,
+                                                   <http://example.org/maize-kg#PengendalianKimia> .
+
+
+###  http://example.org/maize-kg#akar
+<http://example.org/maize-kg#akar> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/maize-kg#BagianTanaman> .
+
+
+###  http://example.org/maize-kg#ammonium_nitrate
+<http://example.org/maize-kg#ammonium_nitrate> rdf:type owl:NamedIndividual ,
+                                                        <http://example.org/maize-kg#Pengendalian> ,
+                                                        <http://example.org/maize-kg#PengendalianKimia> .
+
+
+###  http://example.org/maize-kg#bacillus_subtilis
+<http://example.org/maize-kg#bacillus_subtilis> rdf:type owl:NamedIndividual ,
+                                                         <http://example.org/maize-kg#Pengendalian> ,
+                                                         <http://example.org/maize-kg#PengendalianBiologis> .
+
+
+###  http://example.org/maize-kg#bacillus_thuringiensis
+<http://example.org/maize-kg#bacillus_thuringiensis> rdf:type owl:NamedIndividual ,
+                                                              <http://example.org/maize-kg#Pengendalian> ,
+                                                              <http://example.org/maize-kg#PengendalianBiologis> .
+
+
+###  http://example.org/maize-kg#bahan_organik_rendah
+<http://example.org/maize-kg#bahan_organik_rendah> rdf:type owl:NamedIndividual ,
+                                                            <http://example.org/maize-kg#FaktorLingkungan> .
+
+
+###  http://example.org/maize-kg#bakteri
+<http://example.org/maize-kg#bakteri> rdf:type owl:NamedIndividual ,
+                                               <http://example.org/maize-kg#Patogen> .
+
+
+###  http://example.org/maize-kg#batang
+<http://example.org/maize-kg#batang> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/maize-kg#BagianTanaman> .
+
+
+###  http://example.org/maize-kg#batang_rapuh
+<http://example.org/maize-kg#batang_rapuh> rdf:type owl:NamedIndividual ,
+                                                    <http://example.org/maize-kg#Gejala> .
+
+
+###  http://example.org/maize-kg#bercak
+<http://example.org/maize-kg#bercak> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/maize-kg#Gejala> .
+
+
+###  http://example.org/maize-kg#biji
+<http://example.org/maize-kg#biji> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/maize-kg#BagianTanaman> .
+
+
+###  http://example.org/maize-kg#boron_foliar
+<http://example.org/maize-kg#boron_foliar> rdf:type owl:NamedIndividual ,
+                                                    <http://example.org/maize-kg#Pengendalian> ,
+                                                    <http://example.org/maize-kg#PengendalianKimia> .
+
+
+###  http://example.org/maize-kg#bunga
+<http://example.org/maize-kg#bunga> rdf:type owl:NamedIndividual ,
+                                             <http://example.org/maize-kg#BagianTanaman> .
+
+
+###  http://example.org/maize-kg#bunga_jantan
+<http://example.org/maize-kg#bunga_jantan> rdf:type owl:NamedIndividual ,
+                                                    <http://example.org/maize-kg#BagianTanaman> .
+
+
+###  http://example.org/maize-kg#busuk
+<http://example.org/maize-kg#busuk> rdf:type owl:NamedIndividual ,
+                                             <http://example.org/maize-kg#Gejala> .
+
+
+###  http://example.org/maize-kg#cabut_tanaman_terinfeksi
+<http://example.org/maize-kg#cabut_tanaman_terinfeksi> rdf:type owl:NamedIndividual ,
+                                                                <http://example.org/maize-kg#Pengendalian> ,
+                                                                <http://example.org/maize-kg#PengendalianMekanis> .
+
+
+###  http://example.org/maize-kg#carbendazim
+<http://example.org/maize-kg#carbendazim> rdf:type owl:NamedIndividual ,
+                                                   <http://example.org/maize-kg#Pengendalian> ,
+                                                   <http://example.org/maize-kg#PengendalianKimia> .
+
+
+###  http://example.org/maize-kg#chlorothalonil
+<http://example.org/maize-kg#chlorothalonil> rdf:type owl:NamedIndividual ,
+                                                      <http://example.org/maize-kg#Pengendalian> ,
+                                                      <http://example.org/maize-kg#PengendalianKimia> .
+
+
+###  http://example.org/maize-kg#chlorpyrifos
+<http://example.org/maize-kg#chlorpyrifos> rdf:type owl:NamedIndividual ,
+                                                    <http://example.org/maize-kg#Pengendalian> ,
+                                                    <http://example.org/maize-kg#PengendalianKimia> .
+
+
+###  http://example.org/maize-kg#daun
+<http://example.org/maize-kg#daun> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/maize-kg#BagianTanaman> .
+
+
+###  http://example.org/maize-kg#daun_mengkerut
+<http://example.org/maize-kg#daun_mengkerut> rdf:type owl:NamedIndividual ,
+                                                      <http://example.org/maize-kg#Gejala> .
+
+
+###  http://example.org/maize-kg#daun_rapuh
+<http://example.org/maize-kg#daun_rapuh> rdf:type owl:NamedIndividual ,
+                                                  <http://example.org/maize-kg#Gejala> .
+
+
+###  http://example.org/maize-kg#defisiensi
+<http://example.org/maize-kg#defisiensi> rdf:type owl:NamedIndividual ,
+                                                  <http://example.org/maize-kg#Patogen> .
+
+
+###  http://example.org/maize-kg#deformasi
+<http://example.org/maize-kg#deformasi> rdf:type owl:NamedIndividual ,
+                                                 <http://example.org/maize-kg#Gejala> .
+
+
+###  http://example.org/maize-kg#deltamethrin
+<http://example.org/maize-kg#deltamethrin> rdf:type owl:NamedIndividual ,
+                                                    <http://example.org/maize-kg#Pengendalian> ,
+                                                    <http://example.org/maize-kg#PengendalianKimia> .
+
+
+###  http://example.org/maize-kg#diabrotica
+<http://example.org/maize-kg#diabrotica> rdf:type owl:NamedIndividual ,
+                                                  <http://example.org/maize-kg#Vektor> .
+
+
+###  http://example.org/maize-kg#drainase_baik
+<http://example.org/maize-kg#drainase_baik> rdf:type owl:NamedIndividual ,
+                                                     <http://example.org/maize-kg#Pencegahan> .
+
+
+###  http://example.org/maize-kg#drainase_buruk
+<http://example.org/maize-kg#drainase_buruk> rdf:type owl:NamedIndividual ,
+                                                      <http://example.org/maize-kg#FaktorLingkungan> .
+
+
+###  http://example.org/maize-kg#eradikasi_tanaman_sakit
+<http://example.org/maize-kg#eradikasi_tanaman_sakit> rdf:type owl:NamedIndividual ,
+                                                               <http://example.org/maize-kg#Pencegahan> .
+
+
+###  http://example.org/maize-kg#ferrous_sulphate
+<http://example.org/maize-kg#ferrous_sulphate> rdf:type owl:NamedIndividual ,
+                                                        <http://example.org/maize-kg#Pengendalian> ,
+                                                        <http://example.org/maize-kg#PengendalianKimia> .
+
+
+###  http://example.org/maize-kg#fungisida_copper
+<http://example.org/maize-kg#fungisida_copper> rdf:type owl:NamedIndividual ,
+                                                        <http://example.org/maize-kg#Pengendalian> ,
+                                                        <http://example.org/maize-kg#PengendalianKimia> .
+
+
+###  http://example.org/maize-kg#gugur_daun
+<http://example.org/maize-kg#gugur_daun> rdf:type owl:NamedIndividual ,
+                                                  <http://example.org/maize-kg#Gejala> .
+
+
+###  http://example.org/maize-kg#hindari_pH_tinggi
+<http://example.org/maize-kg#hindari_pH_tinggi> rdf:type owl:NamedIndividual ,
+                                                         <http://example.org/maize-kg#Pencegahan> .
+
+
+###  http://example.org/maize-kg#imidacloprid
+<http://example.org/maize-kg#imidacloprid> rdf:type owl:NamedIndividual ,
+                                                    <http://example.org/maize-kg#Pengendalian> ,
+                                                    <http://example.org/maize-kg#PengendalianKimia> .
+
+
+###  http://example.org/maize-kg#insektisida_organophosphate
+<http://example.org/maize-kg#insektisida_organophosphate> rdf:type owl:NamedIndividual ,
+                                                                   <http://example.org/maize-kg#Pengendalian> ,
+                                                                   <http://example.org/maize-kg#PengendalianKimia> .
+
+
+###  http://example.org/maize-kg#insektisida_vektor
+<http://example.org/maize-kg#insektisida_vektor> rdf:type owl:NamedIndividual ,
+                                                          <http://example.org/maize-kg#Pengendalian> ,
+                                                          <http://example.org/maize-kg#PengendalianKimia> .
+
+
+###  http://example.org/maize-kg#jamur
+<http://example.org/maize-kg#jamur> rdf:type owl:NamedIndividual ,
+                                             <http://example.org/maize-kg#Patogen> .
+
+
+###  http://example.org/maize-kg#jamur_beauveria
+<http://example.org/maize-kg#jamur_beauveria> rdf:type owl:NamedIndividual ,
+                                                       <http://example.org/maize-kg#Pengendalian> ,
+                                                       <http://example.org/maize-kg#PengendalianBiologis> .
+
+
+###  http://example.org/maize-kg#jamur_metarhizium
+<http://example.org/maize-kg#jamur_metarhizium> rdf:type owl:NamedIndividual ,
+                                                         <http://example.org/maize-kg#Pengendalian> ,
+                                                         <http://example.org/maize-kg#PengendalianBiologis> .
+
+
+###  http://example.org/maize-kg#jarak_tanam_optimal
+<http://example.org/maize-kg#jarak_tanam_optimal> rdf:type owl:NamedIndividual ,
+                                                           <http://example.org/maize-kg#Pencegahan> .
+
+
+###  http://example.org/maize-kg#kelembaban_rendah
+<http://example.org/maize-kg#kelembaban_rendah> rdf:type owl:NamedIndividual ,
+                                                         <http://example.org/maize-kg#FaktorLingkungan> .
+
+
+###  http://example.org/maize-kg#kelembaban_tinggi
+<http://example.org/maize-kg#kelembaban_tinggi> rdf:type owl:NamedIndividual ,
+                                                         <http://example.org/maize-kg#FaktorLingkungan> .
+
+
+###  http://example.org/maize-kg#kerusakan
+<http://example.org/maize-kg#kerusakan> rdf:type owl:NamedIndividual ,
+                                                 <http://example.org/maize-kg#Gejala> .
+
+
+###  http://example.org/maize-kg#klorosis
+<http://example.org/maize-kg#klorosis> rdf:type owl:NamedIndividual ,
+                                                <http://example.org/maize-kg#Gejala> .
+
+
+###  http://example.org/maize-kg#kompos
+<http://example.org/maize-kg#kompos> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/maize-kg#Pengendalian> ,
+                                              <http://example.org/maize-kg#PengendalianBiologis> .
+
+
+###  http://example.org/maize-kg#kumbang
+<http://example.org/maize-kg#kumbang> rdf:type owl:NamedIndividual ,
+                                               <http://example.org/maize-kg#Vektor> .
+
+
+###  http://example.org/maize-kg#kutu_daun
+<http://example.org/maize-kg#kutu_daun> rdf:type owl:NamedIndividual ,
+                                                 <http://example.org/maize-kg#Vektor> .
+
+
+###  http://example.org/maize-kg#layu
+<http://example.org/maize-kg#layu> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/maize-kg#Gejala> .
+
+
+###  http://example.org/maize-kg#mancozeb
+<http://example.org/maize-kg#mancozeb> rdf:type owl:NamedIndividual ,
+                                                <http://example.org/maize-kg#Pengendalian> ,
+                                                <http://example.org/maize-kg#PengendalianKimia> .
+
+
+###  http://example.org/maize-kg#metalaxyl
+<http://example.org/maize-kg#metalaxyl> rdf:type owl:NamedIndividual ,
+                                                 <http://example.org/maize-kg#Pengendalian> ,
+                                                 <http://example.org/maize-kg#PengendalianKimia> .
+
+
+###  http://example.org/maize-kg#metam_sodium
+<http://example.org/maize-kg#metam_sodium> rdf:type owl:NamedIndividual ,
+                                                    <http://example.org/maize-kg#Pengendalian> ,
+                                                    <http://example.org/maize-kg#PengendalianKimia> .
+
+
+###  http://example.org/maize-kg#monitoring_rutin
+<http://example.org/maize-kg#monitoring_rutin> rdf:type owl:NamedIndividual ,
+                                                        <http://example.org/maize-kg#Pencegahan> .
+
+
+###  http://example.org/maize-kg#neem_oil
+<http://example.org/maize-kg#neem_oil> rdf:type owl:NamedIndividual ,
+                                                <http://example.org/maize-kg#Pengendalian> ,
+                                                <http://example.org/maize-kg#PengendalianBiologis> ,
+                                                <http://example.org/maize-kg#PengendalianKimia> .
+
+
+###  http://example.org/maize-kg#nekrosis
+<http://example.org/maize-kg#nekrosis> rdf:type owl:NamedIndividual ,
+                                                <http://example.org/maize-kg#Gejala> .
+
+
+###  http://example.org/maize-kg#nematoda
+<http://example.org/maize-kg#nematoda> rdf:type owl:NamedIndividual ,
+                                                <http://example.org/maize-kg#Pengendalian> ,
+                                                <http://example.org/maize-kg#PengendalianBiologis> .
+
+
+###  http://example.org/maize-kg#npv
+<http://example.org/maize-kg#npv> rdf:type owl:NamedIndividual ,
+                                           <http://example.org/maize-kg#Pengendalian> ,
+                                           <http://example.org/maize-kg#PengendalianBiologis> .
+
+
+###  http://example.org/maize-kg#pH_rendah
+<http://example.org/maize-kg#pH_rendah> rdf:type owl:NamedIndividual ,
+                                                 <http://example.org/maize-kg#FaktorLingkungan> .
+
+
+###  http://example.org/maize-kg#pH_tinggi
+<http://example.org/maize-kg#pH_tinggi> rdf:type owl:NamedIndividual ,
+                                                 <http://example.org/maize-kg#FaktorLingkungan> .
+
+
+###  http://example.org/maize-kg#parasitoid_telur
+<http://example.org/maize-kg#parasitoid_telur> rdf:type owl:NamedIndividual ,
+                                                        <http://example.org/maize-kg#Pengendalian> ,
+                                                        <http://example.org/maize-kg#PengendalianBiologis> .
+
+
+###  http://example.org/maize-kg#pengumpulan_manual
+<http://example.org/maize-kg#pengumpulan_manual> rdf:type owl:NamedIndividual ,
+                                                          <http://example.org/maize-kg#Pengendalian> ,
+                                                          <http://example.org/maize-kg#PengendalianMekanis> .
+
+
+###  http://example.org/maize-kg#penurunan_hasil
+<http://example.org/maize-kg#penurunan_hasil> rdf:type owl:NamedIndividual ,
+                                                       <http://example.org/maize-kg#Gejala> .
+
+
+###  http://example.org/maize-kg#penyiraman_tepat
+<http://example.org/maize-kg#penyiraman_tepat> rdf:type owl:NamedIndividual ,
+                                                        <http://example.org/maize-kg#Pencegahan> .
+
+
+###  http://example.org/maize-kg#perangkap
+<http://example.org/maize-kg#perangkap> rdf:type owl:NamedIndividual ,
+                                                 <http://example.org/maize-kg#Pengendalian> ,
+                                                 <http://example.org/maize-kg#PengendalianMekanis> .
+
+
+###  http://example.org/maize-kg#pseudomonas
+<http://example.org/maize-kg#pseudomonas> rdf:type owl:NamedIndividual ,
+                                                   <http://example.org/maize-kg#Pengendalian> ,
+                                                   <http://example.org/maize-kg#PengendalianBiologis> .
+
+
+###  http://example.org/maize-kg#pucuk
+<http://example.org/maize-kg#pucuk> rdf:type owl:NamedIndividual ,
+                                             <http://example.org/maize-kg#BagianTanaman> .
+
+
+###  http://example.org/maize-kg#pupuk_kandang
+<http://example.org/maize-kg#pupuk_kandang> rdf:type owl:NamedIndividual ,
+                                                     <http://example.org/maize-kg#Pengendalian> ,
+                                                     <http://example.org/maize-kg#PengendalianBiologis> .
+
+
+###  http://example.org/maize-kg#pyrethroid
+<http://example.org/maize-kg#pyrethroid> rdf:type owl:NamedIndividual ,
+                                                  <http://example.org/maize-kg#Pengendalian> ,
+                                                  <http://example.org/maize-kg#PengendalianKimia> .
+
+
+###  http://example.org/maize-kg#rotasi_tanaman
+<http://example.org/maize-kg#rotasi_tanaman> rdf:type owl:NamedIndividual ,
+                                                      <http://example.org/maize-kg#Pencegahan> .
+
+
+###  http://example.org/maize-kg#sanitasi_lahan
+<http://example.org/maize-kg#sanitasi_lahan> rdf:type owl:NamedIndividual ,
+                                                      <http://example.org/maize-kg#Pencegahan> .
+
+
+###  http://example.org/maize-kg#serangga
+<http://example.org/maize-kg#serangga> rdf:type owl:NamedIndividual ,
+                                                <http://example.org/maize-kg#Patogen> .
+
+
+###  http://example.org/maize-kg#suhu_rendah
+<http://example.org/maize-kg#suhu_rendah> rdf:type owl:NamedIndividual ,
+                                                   <http://example.org/maize-kg#FaktorLingkungan> .
+
+
+###  http://example.org/maize-kg#suhu_tinggi
+<http://example.org/maize-kg#suhu_tinggi> rdf:type owl:NamedIndividual ,
+                                                   <http://example.org/maize-kg#FaktorLingkungan> .
+
+
+###  http://example.org/maize-kg#tanah_berpasir
+<http://example.org/maize-kg#tanah_berpasir> rdf:type owl:NamedIndividual ,
+                                                      <http://example.org/maize-kg#FaktorLingkungan> .
+
+
+###  http://example.org/maize-kg#tanaman_kerdil
+<http://example.org/maize-kg#tanaman_kerdil> rdf:type owl:NamedIndividual ,
+                                                      <http://example.org/maize-kg#Gejala> .
+
+
+###  http://example.org/maize-kg#tawon_parasitoid
+<http://example.org/maize-kg#tawon_parasitoid> rdf:type owl:NamedIndividual ,
+                                                        <http://example.org/maize-kg#Pengendalian> ,
+                                                        <http://example.org/maize-kg#PengendalianBiologis> .
+
+
+###  http://example.org/maize-kg#tes_tanah_rutin
+<http://example.org/maize-kg#tes_tanah_rutin> rdf:type owl:NamedIndividual ,
+                                                       <http://example.org/maize-kg#Pencegahan> .
+
+
+###  http://example.org/maize-kg#thrips
+<http://example.org/maize-kg#thrips> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/maize-kg#Vektor> .
+
+
+###  http://example.org/maize-kg#tongkol
+<http://example.org/maize-kg#tongkol> rdf:type owl:NamedIndividual ,
+                                               <http://example.org/maize-kg#BagianTanaman> .
+
+
+###  http://example.org/maize-kg#trichoderma
+<http://example.org/maize-kg#trichoderma> rdf:type owl:NamedIndividual ,
+                                                   <http://example.org/maize-kg#Pengendalian> ,
+                                                   <http://example.org/maize-kg#PengendalianBiologis> .
+
+
+###  http://example.org/maize-kg#tungau
+<http://example.org/maize-kg#tungau> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/maize-kg#Vektor> .
+
+
+###  http://example.org/maize-kg#urea
+<http://example.org/maize-kg#urea> rdf:type owl:NamedIndividual ,
+                                            <http://example.org/maize-kg#Pengendalian> ,
+                                            <http://example.org/maize-kg#PengendalianKimia> .
+
+
+###  http://example.org/maize-kg#varietas_tahan
+<http://example.org/maize-kg#varietas_tahan> rdf:type owl:NamedIndividual ,
+                                                      <http://example.org/maize-kg#Pencegahan> .
+
+
+###  http://example.org/maize-kg#virus
+<http://example.org/maize-kg#virus> rdf:type owl:NamedIndividual ,
+                                             <http://example.org/maize-kg#Patogen> .
+
+
+###  http://example.org/maize-kg#wereng
+<http://example.org/maize-kg#wereng> rdf:type owl:NamedIndividual ,
+                                              <http://example.org/maize-kg#Vektor> .
+
+
+###  http://example.org/maize-kg#zinc_sulfate
+<http://example.org/maize-kg#zinc_sulfate> rdf:type owl:NamedIndividual ,
+                                                    <http://example.org/maize-kg#Pengendalian> ,
+                                                    <http://example.org/maize-kg#PengendalianKimia> .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<http://example.org/maize-kg#d> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://example.org/maize-kg#c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://example.org/maize-kg#x> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://example.org/maize-kg#h> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://example.org/maize-kg#p> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://example.org/maize-kg#v> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "rekomendasi kimia jamur" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#PenyakitJamur> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#dikendalikanDengan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#c>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#PengendalianKimia> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#c>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#rekomendasiPengendalian> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#p> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#c>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "rekomendasi kimia virus" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#PenyakitVirus> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#v>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#dikendalikanDengan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#v> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#c>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#PengendalianKimia> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#c>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#rekomendasiPengendalian> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#v> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#c>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "penyakit bakteri" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#Penyakit> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#disebabkanOleh> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#bakteri>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#PenyakitBakteri> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#p>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "penyakit jamur" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#Penyakit> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#disebabkanOleh> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#jamur>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#PenyakitJamur> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#p>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "penyakit virus" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#Penyakit> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#disebabkanOleh> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#virus>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#PenyakitVirus> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#p>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "penyakit adalah masalah tanaman" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#Penyakit> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#x>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#MasalahTanaman> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#x>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "rekomendasi biologis defisiensi unsur" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#DefisiensiUnsur> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#d>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#dikendalikanDengan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#d> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#c>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#PengendalianBiologis> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#c>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#rekomendasiPengendalian> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#d> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#c>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "rekomendasi kimia defisiensi unsur" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#DefisiensiUnsur> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#d>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#dikendalikanDengan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#d> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#c>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#PengendalianKimia> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#c>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#rekomendasiPengendalian> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#d> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#c>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "defisiensi unsur adalah masalah tanaman" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#DefisiensiUnsur> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#x>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#MasalahTanaman> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#x>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "rekomendasi biologis serangga" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#Hama> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#h>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#disebabkanOleh> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#h> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#serangga>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#dikendalikanDengan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#h> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#c>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#PengendalianBiologis> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#c>
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#rekomendasiPengendalian> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#h> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#c>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "rekomendasi mekanis serangga" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#Hama> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#h>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#disebabkanOleh> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#h> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#serangga>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#dikendalikanDengan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#h> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#c>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#PengendalianMekanis> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#c>
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#rekomendasiPengendalian> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#h> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#c>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "hama adalah masalah tanaman" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#Hama> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#x>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#MasalahTanaman> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#x>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "rekomendasi biologis jamur" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#PenyakitJamur> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#dikendalikanDengan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#c>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#PengendalianBiologis> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#c>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#rekomendasiPengendalian> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#p> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#c>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "rekomendasi biologis virus" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#PenyakitVirus> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#v>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#dikendalikanDengan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#v> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#c>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/maize-kg#PengendalianBiologis> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#c>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/maize-kg#rekomendasiPengendalian> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://example.org/maize-kg#v> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://example.org/maize-kg#c>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
